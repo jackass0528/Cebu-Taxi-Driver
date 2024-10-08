@@ -12,7 +12,15 @@
     
     /*start navbar dropdown list*/
     
-    
+    /*Header Logo*/
+    .container-header  img{
+      background-color: green;
+      width: 250px;
+      height: 180;
+
+    }
+
+
     /*header*/
     .header{
         position: absolute;
