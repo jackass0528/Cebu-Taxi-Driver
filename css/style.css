@@ -440,56 +440,14 @@
 
       /****************** End Top Contact and Map *******************/
       
-
-
-
-
-
-    /**************************** Start payment Section *************************/
     
-    .payment-header{
-      margin-top: 50px;
-    font-size: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
+    #back-to-top-btn{
+        position: fixed;
+        bottom: 0px;
+        left: 10px;       
     }
-    
-    .payment{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     justify-content: center;
-    margin-top: 20px;
+    #back-to-top-btn img{
+        width: 20px;
+        height: 20px;
     }
-    
-    
-    .payment img{
-     width: 150px;
-     height: auto;
-    }
-    
-    .payment-item-1 ul{
-    margin: 10px;
-     display:flex;
-     gap: 1rem;
-    }
-    .payment-item-1 b{
-     padding-left: 120px;
-    }
-    
-    
-    .payment-item-2 ul{
-    margin: 10px;
-     display: flex;
-     gap: 1rem;
-    }
-    .payment-item-2 b{
-     padding-left: 60px;
-    }
-    
-    
-    /********************************** end payment Section *************************/
-    
-    
-    
