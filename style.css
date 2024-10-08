@@ -12,6 +12,7 @@
     
     /*start navbar dropdown list*/
     
+    
     /*header*/
     .header{
         position: absolute;
@@ -206,77 +207,78 @@
                 margin-top: 30px;
             }
             }
-    
-            @media (min-width: 600px){
-                .header .menu > .menu-item-has-children:hover > .sub-menu{
-                    transform: translateY(0);
-                    opacity: 1;
-                    visibility: visible;
-                 }
-                 .header .menu > .menu-item-has-children:hover > a .plus:after{
-                    transform: translate(-50%,-50%) rotate(0deg);		
-                 }
-                 .header .logo{
-                    padding-top: 20px;
-                }
-                .header .open-nav-menu{
-                    margin-top: 20px;
-                }
-                
-            
-                }
-                @media (min-width: 470px){
-                    .header .menu > .menu-item-has-children:hover > .sub-menu{
-                        transform: translateY(0);
-                        opacity: 1;
-                        visibility: visible;
-                     }
-                     .header .menu > .menu-item-has-children:hover > a .plus:after{
-                        transform: translate(-50%,-50%) rotate(0deg);		
-                     }
-                     .header .logo a img{
-                        margin-top: 20px;
+
+      @media (min-width: 600px){
+          .header .menu > .menu-item-has-children:hover > .sub-menu{
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            .header .menu > .menu-item-has-children:hover > a .plus:after{
+              transform: translate(-50%,-50%) rotate(0deg);		
+            }
+            .header .logo{
+              padding-top: 20px;
+          }
+          .header .open-nav-menu{
+              margin-top: 20px;
+          }
+          
+      
+          }
+      @media (min-width: 470px){
+          .header .menu > .menu-item-has-children:hover > .sub-menu{
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            .header .menu > .menu-item-has-children:hover > a .plus:after{
+              transform: translate(-50%,-50%) rotate(0deg);		
+            }
+            .header .logo a img{
+              margin-top: 20px;
+          }
+          .header .open-nav-menu{
+  
+              padding-top: 20px;
+          }
+      
                     }
-                    .header .open-nav-menu{
-            
-                        padding-top: 20px;
-                    }
-                
-                    }
-                    @media (min-width: 375px){
-                        .header .menu > .menu-item-has-children:hover > .sub-menu{
-                            transform: translateY(0);
-                            opacity: 1;
-                            visibility: visible;
-                         }
-                         .header .menu > .menu-item-has-children:hover > a .plus:after{
-                            transform: translate(-50%,-50%) rotate(0deg);		
-                         }
-                         .header .logo a img{
-                            margin-top: 10px;
-                        }
-                        .header .open-nav-menu{
-                            margin-top: 20px;
-                        }
-                    
-                        }
-                        @media (min-width: 320px){
-                            .header .menu > .menu-item-has-children:hover > .sub-menu{
-                                transform: translateY(0);
-                                opacity: 1;
-                                visibility: visible;
-                             }
-                             .header .menu > .menu-item-has-children:hover > a .plus:after{
-                                transform: translate(-50%,-50%) rotate(0deg);		
-                             }
-                             .header .logo a img{
-                                margin-top: 40px;
-                            }
-                            .header .open-nav-menu{
-                                margin-top: 20px;
-                            }
-                        
-                            }
+      @media (min-width: 375px){
+          .header .menu > .menu-item-has-children:hover > .sub-menu{
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            .header .menu > .menu-item-has-children:hover > a .plus:after{
+              transform: translate(-50%,-50%) rotate(0deg);		
+            }
+            .header .logo a img{
+              margin-top: 10px;
+          }
+          .header .open-nav-menu{
+              margin-top: 20px;
+          }
+      
+          }
+
+      @media (min-width: 320px){
+          .header .menu > .menu-item-has-children:hover > .sub-menu{
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            .header .menu > .menu-item-has-children:hover > a .plus:after{
+              transform: translate(-50%,-50%) rotate(0deg);		
+            }
+            .header .logo a img{
+              margin-top: 40px;
+          }
+          .header .open-nav-menu{
+              margin-top: 20px;
+          }
+      
+          }
     
     
     @media(max-width: 992px){
