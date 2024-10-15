@@ -23,6 +23,13 @@
         }
     }
 
+    @media (min-width: 375px){
+        body{
+            width: 80%;
+            height: auto;
+        }
+    }
+
     :root {
         /**colors**/
 --white-color: #f7f2f2;
