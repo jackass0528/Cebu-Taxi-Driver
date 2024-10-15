@@ -286,10 +286,13 @@
     }
 
     @media(max-width: 1024px){
-        .header .menu > .menu-item > a .plus{     
+        .header .menu > .menu-item > a .plus{
+            display: inline-block;
             height: 6px;
             width: 6px;
-           
+            position: relative;
+            margin-left:5px; 
+            pointer-events: none;
         }
     }
 

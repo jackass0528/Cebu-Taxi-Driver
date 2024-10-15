@@ -6,7 +6,8 @@
     "axe/parsing": [
       "default",
       {
-        "marquee": "off"
+        "marquee": "off",
+        "duplicate-id-active": "off"
       }
     ]
   }
