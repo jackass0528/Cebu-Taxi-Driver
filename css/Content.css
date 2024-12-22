@@ -1,26 +1,14 @@
 /**************************** Start payment Section *************************/
 
-:root {
-  /**colors**/
---white-color: #f7f2f2;
---dark-color: #b3aaaaf3;
---ligth-color: #ce0707;
-  
- /**font size**/
---font-size-s: 0.9rem;
---font-size-n: 1rem;
---font-size-m: 1.12rem;
---font-size-l: 1.5rem;
-
-
-}
 
 .main-content{
   position: relative;
-  top: 1050px;
+  top: 1000px;
   width: 100%;
-  height: 1000px;
-  margin: 10px;
+  height: 1200px;
+  margin: 0;
+  background-color: var(--ligth-color);
+  
   }
 
 
@@ -38,11 +26,10 @@
   /*********************** Fisrt Conten ******************/
   
   .item-1{  
-    width: 100%;
-    height: auto;
     display: flex;
     justify-content: flex-start;
-    background-color: #ce0707;
+    position: relative;
+   
     
 
   }
@@ -57,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 800px;
-    height: auto;
+    position: relative;
     
   }
 
@@ -65,7 +52,9 @@
     border-radius: 90%;
     width: 500px;
     height: 500px;
-    margin: 20px 80px 150px 50px;
+    left: 140px;
+    top: 350px;
+    position: absolute;
     z-index: 1;
   
     
@@ -77,6 +66,8 @@
     width: 200px;
     height: 200px;
     margin: 20px;
+    top: 230px;
+    position: absolute;
     
   }
   
@@ -85,24 +76,33 @@
     width: 300px;
     height: 300px;
     margin: 20px ;
+    left: 150px;
+    position: absolute;
     
   }
 
   .first-img-4 img{
     width: 500px;
     height: 300px;
-    margin-left: 10px ;
-    margin-top: 50px;
+    left: 20px ;
+    margin-top: 20px;
+    position: absolute;
   
     
   }
 
  
   .first-paragrap{
-    margin: 70px;
+    color: var(--white-color);
+    right: 100px;
     width: 500px;
     height: auto;
+    position: relative;
     
+  }
+
+  .first-paragrap h3{
+    color: var(--secondary-text);
   }
 
 
@@ -125,7 +125,6 @@
   }
 
   .second-paragrap{
-
     width: 500px;
     height: 500px;
     margin: 70px;
@@ -139,8 +138,60 @@
  
   }
 
+  /*********************** Second Content Style ******************/
+
+.row{
+  width: 300px;
+  background-color: black;
+  border: 1px solid #eee;
+  position: absolute;
+  right: 20px;
+  
+}
+
+.sc2{
+  height: 600px;
+  position: relative;
+  background-color: #eee;
+}
  
+.sc2:before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 60%;
+  top: 400px;
+  left: 0;
+  background-color: #eee;
+  transform: skewY(25deg);
+  z-index: 1; 
+  
+}
+
+/************
+
+.sc3{
+  height: 500px;
+  position: relative;
+  background-color: #000;
+  right: 20px;
+  top: -800;
+
+}
  
+.sc3:before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 60%;
+  top: -300px;
+  left: 0;
+  background-color: #000;
+  transform: skewY(25deg);
+  z-index: 1; 
+  
+}
+ **************/
 
   /*********************** third Content ******************/
   
@@ -157,3 +208,98 @@
     height: 50px;
     margin-left: 180px;
   }
+
+   /*********************** Mobile Second Content ******************/
+
+@media (max-width: 1231px) {
+  .first-paragrap{
+     left: 160px ;
+  }
+
+  .group-image-1{
+    position: absolute;
+    left: 300px;
+    margin-top: 1100px;
+  }
+
+  .main-content{
+    height: 2200px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .first-paragrap{
+     left: 40px ;
+  }
+
+  .group-image-1{
+    position: absolute;
+    left: 180px;
+    margin-top: 1080px;
+  }
+
+  .main-content{
+    height: 2200px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .row{
+    display: none;
+  }
+  .first-paragrap{
+    position: absolute;
+    width: auto;
+  }
+
+ #btn-book-now{
+    width: auto;
+   margin-left: 20px;
+  }
+
+  .group-image-1{
+    position: absolute;
+    left: 180px;
+    margin-top: 1800px;
+  }
+
+  .main-content{
+    height: 2600px;
+  }
+  .group-image-1{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    left: 10px;
+    margin-top: 1700px;
+   
+  }
+
+.first-img-4 img, .first-img img, .first-img-3 img, .first-img-2 img   {
+width: 250px;
+height: auto;
+}
+
+.first-img img{
+  position: absolute;
+  left: 40px;
+  margin-top: 150px;
+  border-radius: 0%;
+}
+
+.first-img-3 img{
+  position: absolute;
+  border-radius: 0%;
+  left: 20px;
+  
+}
+.first-img-2 img{
+  position: absolute;
+  left: 20px;
+  border-radius: 0%;
+}
+
+}

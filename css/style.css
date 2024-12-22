@@ -1,3 +1,28 @@
+:root {
+    /**colors**/
+--white-color: #f7f2f2;
+--secondary-text:#232738;
+--dark-color: #b3aaaaf3;
+--ligth-color: #ce0707;
+    
+   /**font size**/
+--font-size-s: 0.9rem;
+--font-size-n: 1rem;
+--font-size-m: 1.12rem;
+--font-size-l: 1.5rem;
+
+
+}
+
+.darkmode{
+--text-color:#070b1d ;
+--secondary-text: #101425;
+--white-color: black;
+--dark-color: #b3aaaaf3;
+--ligth-color: white;
+
+}
+
 
 * {
     box-sizing: border-box;
@@ -11,26 +36,13 @@
       background-image: url("../image/header-background.jpg ");  
       background-repeat: no-repeat;
       background-position: center;
+      background-attachment: fixed;
       position: relative;
       background-size: cover;
       
     }
 
 
-
-    :root {
-        /**colors**/
---white-color: #f7f2f2;
---dark-color: #b3aaaaf3;
-        
-       /**font size**/
---font-size-s: 0.9rem;
---font-size-n: 1rem;
---font-size-m: 1.12rem;
---font-size-l: 1.5rem;
-
-
-    }
     
     /*start navbar dropdown list*/
 
@@ -60,9 +72,10 @@
     }
     .logo img{
         border-color: 2px solid #f7f2f2;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
+   
     .header .logo img{
         margin-top: 40px;
     
