@@ -43,8 +43,13 @@
       background-position: center;
       background-attachment: fixed;
       background-size: cover;
-      overflow-x: hidden;
    
+   
+    }
+    @media (max-width: 375px){
+        body{
+            overflow-x: hidden;
+        }
     }
 
     html {
