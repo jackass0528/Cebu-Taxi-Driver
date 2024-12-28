@@ -26,21 +26,31 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    
     }
     
     body{
-      color: #b3aaaaf3;
-      margin: 0;
-      padding: 0;
-      background-color: rgb(20, 20, 20);
-      background-image: url("../image/header-background.jpg ");  
+      color: #b3aaaaf3; 
+      background-color: rgb(20, 20, 20);       
+      background-image: url("../image/header-background.jpg "); 
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
-      position: relative;
       background-size: cover;
-      
+      overflow-x: hidden;
+   
     }
+
+    html {
+        touch-action: manipulation;
+    }
+
 
 
     
