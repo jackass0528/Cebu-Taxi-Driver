@@ -3,7 +3,8 @@
   .container-footer{
     background-color: #f7f2f2;
     position: relative;
-    top: 900px;
+    top: 200vh;
+    display: none;
    
     
   }
@@ -46,6 +47,7 @@
       flex-direction: column;
       gap: 10px;
     }
+ 
     
     .footer-logo{
     width: 50x;
@@ -82,7 +84,9 @@
         flex-direction: column;
        
       }
-
+      .col-md-3 {
+        margin-top: 20px;
+      }
     }  
 
     
@@ -92,6 +96,9 @@
       margin: 20px;
       flex-direction: column;
      
+    }
+    .col-md-3 {
+      margin-top: 20px;
     }
   }
     

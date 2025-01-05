@@ -23,7 +23,7 @@
   justify-content: center;
   }
 
-  /*********************** Fisrt Conten ******************/
+  /*********************** First Conten ******************/
   
   .item-1{  
     display: flex;
@@ -105,6 +105,129 @@
     color: var(--secondary-text);
   }
 
+  .row{
+    width: 300px;
+    background-color: black;
+    border: 1px solid #eee;
+    position: absolute;
+    right: 20px;
+    
+  }
+  
+  .sc2{
+    height: 600px;
+    position: relative;
+    background-color: #eee;
+  }
+   
+  .sc2:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 60%;
+    top: 400px;
+    left: 0;
+    background-color: #eee;
+    transform: skewY(25deg);
+    z-index: 1; 
+    
+  }
+
+   /*********************** Mobile first Content ******************/
+
+   @media (max-width: 1231px) {
+    .first-paragrap{
+       left: 160px ;
+    }
+  
+    .group-image-1{
+      position: absolute;
+      left: 300px;
+      margin-top: 1100px;
+    }
+  
+    .main-content{
+      height: 2200px;
+    }
+  
+  }
+  
+  @media (max-width: 992px) {
+    .first-paragrap{
+       left: 40px ;
+    }
+  
+    .group-image-1{
+      position: absolute;
+      left: 180px;
+      margin-top: 1080px;
+    }
+  
+    .main-content{
+      height: 2200px;
+    }
+  
+  }
+  
+  @media (max-width: 375px) {
+  
+    .row{
+      display: none;
+    }
+    .first-paragrap{
+      position: absolute;
+      width: auto;
+    }
+  
+   #btn-book-now{
+      width: auto;
+     margin-left: 20px;
+    }
+  
+    .group-image-1{
+      position: absolute;
+      left: 180px;
+      margin-top: 1800px;
+    }
+  
+    .main-content{
+      height: 2600px;
+    }
+    .group-image-1{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      left: 10px;
+      margin-top: 1200px;
+     
+    }
+  
+  .first-img-4 img, .first-img img, .first-img-3 img, .first-img-2 img   {
+  width: 250px;
+  height: auto;
+  }
+  
+  .first-img img{
+    position: absolute;
+    left: 40px;
+    margin-top: 150px;
+    border-radius: 0%;
+  }
+  
+  .first-img-3 img{
+    position: absolute;
+    border-radius: 0%;
+    left: 20px;
+    
+  }
+  .first-img-2 img{
+    position: absolute;
+    left: 20px;
+    border-radius: 0%;
+  }
+  
+  }
+
 
   /*********************** Second Content ******************/
   
@@ -120,8 +243,8 @@
   .second-content{
     display: flex;
     flex-wrap: wrap;
-    padding-top: 100px;
-    display: none;
+    padding-top: 900px;
+ 
   }
 
   .second-paragrap{
@@ -137,61 +260,34 @@
     margin: 80px;
  
   }
-
-  /*********************** Second Content Style ******************/
-
-.row{
-  width: 300px;
-  background-color: black;
-  border: 1px solid #eee;
-  position: absolute;
-  right: 20px;
-  
+#btn-book-now-second{
+  width: auto;
+  margin-left: 20px;
 }
 
-.sc2{
-  height: 600px;
-  position: relative;
-  background-color: #eee;
-}
- 
-.sc2:before{
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 60%;
-  top: 400px;
-  left: 0;
-  background-color: #eee;
-  transform: skewY(25deg);
-  z-index: 1; 
-  
-}
+/*********************** Mobile Second Content ******************/
+  @media (max-width: 320px){
+    .second-content{
+      padding-top: 250vh;
+   
+    }
+    .second-img img{
+      margin-top: 10px;
+      border-radius: 0%;
+      margin-left: 350px ;
+      width: 250px;
+      height: auto;
+    }
+    .item-2{
+   font-size:smaller;       
+    }
 
-/************
+  }
 
-.sc3{
-  height: 500px;
-  position: relative;
-  background-color: #000;
-  right: 20px;
-  top: -800;
 
-}
- 
-.sc3:before{
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 60%;
-  top: -300px;
-  left: 0;
-  background-color: #000;
-  transform: skewY(25deg);
-  z-index: 1; 
-  
-}
- **************/
+
+
+
 
   /*********************** third Content ******************/
   
@@ -209,97 +305,4 @@
     margin-left: 180px;
   }
 
-   /*********************** Mobile Second Content ******************/
 
-@media (max-width: 1231px) {
-  .first-paragrap{
-     left: 160px ;
-  }
-
-  .group-image-1{
-    position: absolute;
-    left: 300px;
-    margin-top: 1100px;
-  }
-
-  .main-content{
-    height: 2200px;
-  }
-
-}
-
-@media (max-width: 992px) {
-  .first-paragrap{
-     left: 40px ;
-  }
-
-  .group-image-1{
-    position: absolute;
-    left: 180px;
-    margin-top: 1080px;
-  }
-
-  .main-content{
-    height: 2200px;
-  }
-
-}
-
-@media (max-width: 375px) {
-
-  .row{
-    display: none;
-  }
-  .first-paragrap{
-    position: absolute;
-    width: auto;
-  }
-
- #btn-book-now{
-    width: auto;
-   margin-left: 20px;
-  }
-
-  .group-image-1{
-    position: absolute;
-    left: 180px;
-    margin-top: 1800px;
-  }
-
-  .main-content{
-    height: 2600px;
-  }
-  .group-image-1{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    left: 10px;
-    margin-top: 1700px;
-   
-  }
-
-.first-img-4 img, .first-img img, .first-img-3 img, .first-img-2 img   {
-width: 250px;
-height: auto;
-}
-
-.first-img img{
-  position: absolute;
-  left: 40px;
-  margin-top: 150px;
-  border-radius: 0%;
-}
-
-.first-img-3 img{
-  position: absolute;
-  border-radius: 0%;
-  left: 20px;
-  
-}
-.first-img-2 img{
-  position: absolute;
-  left: 20px;
-  border-radius: 0%;
-}
-
-}
