@@ -22,6 +22,9 @@
 --ligth-color: white;
 
 }
+html {
+    touch-action: manipulation;
+}
 
 
 * {
@@ -34,50 +37,17 @@
     scroll-behavior: smooth;
     
     }
-    
-    body{
-      color: #b3aaaaf3; 
-      background-color: rgb(20, 20, 20);       
-      background-image: url("../image/header-background.jpg "); 
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      background-size: cover;
+
+   body{
+        width: 100%;
+        height: 100vh;
+        background-image: url('image/header-background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
    
-    }
-
-
-    @media(max-width: 992px){
-        body{
-            overflow-x: hidden;
-        }
-        
-
-    }
-
-    @media(max-width: 375px){
-        body{
-            overflow-x: hidden;
-        }
-        
-
-    }
-
-    @media(max-width: 320px){
-        body{
-            overflow-x: hidden;
-        }
-        
-
-    }
-
-
-    html {
-        touch-action: manipulation;
-    }
-
-
-
     
     /*start navbar dropdown list*/
 
@@ -359,10 +329,9 @@
         .header .open-nav-menu{
          margin-right: 15px;
          margin-top: 30px;
-        
-       
+         
         }
-    
+        
     }
 
 /************************End Navar header********************/

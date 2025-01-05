@@ -43,7 +43,7 @@
   .group-image-1{
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: auto;
     position: relative;
     
   }
@@ -94,7 +94,7 @@
  
   .first-paragrap{
     color: var(--white-color);
-    right: 100px;
+    left: 700px;
     width: 500px;
     height: auto;
     position: relative;
