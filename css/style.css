@@ -37,6 +37,8 @@
     
     body{
       color: #b3aaaaf3; 
+      width: 100%;
+      height: 100vh;
       background-color: rgb(20, 20, 20);       
       background-image: url("../image/header-background.jpg "); 
       background-repeat: no-repeat;
@@ -341,15 +343,16 @@
         .header .open-nav-menu{
             margin-right: 50px;
             margin-top: 25px;
+            background-color: green;
        
         }
     
     }
     @media(max-width: 375px){
         .header .open-nav-menu{
-            margin-right: 15px;
+         margin-right: 15px;
          margin-top: 30px;
-           
+        background-color: #070b1d;
        
         }
     
