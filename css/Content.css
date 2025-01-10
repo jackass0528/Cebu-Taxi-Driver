@@ -207,6 +207,10 @@
   height: auto;
   }
   
+  .first-paragrap{
+    background-color: aqua;
+  }
+
   .first-img img{
     position: absolute;
     left: 40px;
@@ -225,6 +229,13 @@
     left: 20px;
     border-radius: 0%;
   }
+  
+  }
+
+  @media (max-width: 320px){
+    .first-paragrap{
+      background-color: yellow;
+    }
   
   }
 
