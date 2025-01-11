@@ -30,19 +30,31 @@
     
     }
 
-    
+/******************************Start main container*************/ 
     .container{
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 1.5fr 1.2fr 0.8fr;
         grid-template-areas:
+        "MapTime MapTime MapTime MapTime"
+        "SlideShow SlideShow SlideShow SlideShow"
         "nav nav nav nav"
         "Sidebar main main main"
         "Sidebar Content1 Content2 Content3"
         "footer footer footer footer";
         gap: 0.2rem;
     }
+
+#MapTime{
+    background: red;
+    grid-area: MapTime;
+}
+
+#SlideShow{
+    background: green;
+    grid-area: SlideShow;
+}
 
 nav{
     background: #a7ffeb;
@@ -88,8 +100,10 @@ footer{
 @media (max-width:550px){
     .container{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
         grid-template-areas: 
+        "MapTime"
+        "SlideShow"
         "nav"
         "main"
         "Sidebar"
@@ -100,7 +114,7 @@ footer{
     }
 }
    
-
+/******************************End main container*************/
 
    
     
@@ -115,7 +129,7 @@ footer{
     }
 
 
-    /******************************main container*************/
+    
     
 
 
