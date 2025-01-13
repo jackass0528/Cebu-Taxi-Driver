@@ -35,13 +35,14 @@
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr 0.8fr;
+        grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr 1.2fr 1fr;
         grid-template-areas:
         "MapTime MapTime MapTime MapTime"
         "SlideShow SlideShow SlideShow SlideShow"
         "nav nav nav nav"
         "Sidebar main main main"
         "Sidebar Content1 Content2 Content3"
+        "Sidebar Content4 Content5 Content6"
         "footer footer footer footer";
         gap: 0.2rem;
         
@@ -99,14 +100,51 @@ nav{
 main{
     background: #84ffff;
     grid-area: main;
+    border: 2px black solid;
+    padding: 10px;
+    
+}
+.MainConatent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    border: 2px black solid;
+    padding-left: 50px;
+    padding-top: 50px;
+   
+    
+}
+.box1{
+    width: 100px;
+    height: 100px;
+    background: red;
+    
+ 
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.box3{
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.box4{
+    width: 100px;
+    height: 100px;
+    background: red;
 }
 
 /*******SideBar******/
 #Sidebar{
     background: #18ffff;
     grid-area: Sidebar;
-    
+  
 }
+
 img{
     margin: 10px;
     width: 300px;
@@ -114,6 +152,15 @@ img{
 }
 p{
     margin: 10px;
+}
+
+@media(max-width:1244){
+    #Sidebar{
+
+    }
+    #Sidebar p{
+font-size: x-small;
+    }
 }
 
 /*******Content1******/
@@ -133,6 +180,24 @@ p{
      background: #6fffd2;
      grid-area: Content3;
 }
+/*******Content4******/
+#Content4{
+    background: #6fffda;
+    grid-area: Content4;
+}
+
+/*******Content5******/
+#Content5{
+    background: #73ffba;
+    grid-area: Content5;
+}
+
+/*******Content6******/
+#Content6{
+     background: #6fffd2;
+     grid-area: Content6;
+}
+
 
 /*******Footer******/
 footer{
@@ -154,6 +219,9 @@ footer{
         "Content1"
         "Content2"
         "Content3"
+        "Content4"
+        "Content5"
+        "Content6"
         "footer";
     }
 }
