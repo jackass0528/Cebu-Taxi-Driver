@@ -287,6 +287,26 @@ footer{
     }
 }
    
+@media (max-width:320px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "MapTime"
+        "SlideShow"
+        "nav"
+        "main"
+        "Content1"
+        "Content2"
+        "Content3"
+        "Content4"
+        "Content5"
+        "Content6"
+        "Sidebar"
+        "footer";
+    }
+}
+   
 
 /*****************End main container*************/
 
