@@ -40,7 +40,7 @@
         "MapTime MapTime MapTime MapTime"
         "SlideShow SlideShow SlideShow SlideShow"
         "nav nav nav nav"
-        "Sidebar main main main"
+        "main main main main"
         "Sidebar Content1 Content2 Content3"
         "Sidebar Content4 Content5 Content6"
         "footer footer footer footer";
@@ -255,7 +255,7 @@ footer{
         "MapTime MapTime  "
         "SlideShow SlideShow"
         "nav nav"
-        "Sidebar main"
+        "main main"
         "Sidebar Content1"
          "Sidebar Content2"
         "Sidebar Content3"
@@ -276,13 +276,13 @@ footer{
         "SlideShow"
         "nav"
         "main"
-        "Sidebar"
         "Content1"
         "Content2"
         "Content3"
         "Content4"
         "Content5"
         "Content6"
+        "Sidebar"
         "footer";
     }
 }
