@@ -4,6 +4,7 @@
 --secondary-text:#232738;
 --dark-color: #b3aaaaf3;
 --ligth-color: #ce0707;
+--background: rgba(255, 0, 0, 0.986);
     
    /**font size**/
 --font-size-s: 0.9rem;
@@ -39,32 +40,38 @@
         grid-template-areas:
         "MapTime MapTime MapTime MapTime"
         "SlideShow SlideShow SlideShow SlideShow"
-        "nav nav nav nav"
+        "header header header header"
         "Sidebar main main main"
         "Sidebar Content1 Content2 Content3"
         "Sidebar Content4 Content5 Content6"
         "footer footer footer footer";
-        
+    
         gap: 0.2rem;
+        margin-top: 80px;
         
     }
 
 /********* MapTime *********/
 #MapTime{
     display: grid;
-    background: red;
+    background: black;
     grid-area: MapTime;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding-top: 10px;
     text-align: center;
+    position: fixed;
+    height: 60px;
+    margin-top: -80px;
+    width: 100%;
     
 }
 
 @media (max-width:650px) {
     #MapTime{
 grid-template-columns: 1fr;
-grid-template-rows: 1fr;   
+grid-template-rows: 1fr; 
+
 }
 #MapTime .header-contact-phone-number li{
    padding-left: 10px;
@@ -75,11 +82,13 @@ grid-template-rows: 1fr;
 
 .map{
  
-  color: blue;
+  color: rgb(255, 255, 255);
   text-decoration: underline; 
+
 }
 #MapTime .header-contact-phone-number li{
     display: inline-block;
+   
    
 }
 
@@ -87,51 +96,172 @@ grid-template-rows: 1fr;
 
 /*******SlideShow******/
 #SlideShow{
-    background: green;
+    background: black;
     grid-area: SlideShow;
+    position: fixed;
+    height: 50px;
+    margin-top: -50px;
     
 }
 
-/*******Navbar******/
+.moving-text{
+    margin-top: 10px;
+    color: white;
+}
+
+/*******header******/
+header{
+   grid-area: header;
+   background-color: var(--background);
+   text-align: center;
+   position: fixed;
+   width: 100%;
+   margin-top: -15px;
+   height: 100px;
+   z-index: 999;
+ 
+}
+
 nav{
-    background: #a7ffeb;
-    grid-area: nav;
-  
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+ 
 }
-
-.navbar{
-    color: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 20px;
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.navbar a{
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav a{
+    color: #070b1d;
     text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+nav a:hover {
+    color: white;
 }
 
-.navbar a:hover {
-    color: #ce0707;
-
-} 
-
-.nav-list{
-    list-style-type: none;
-    
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+    transition: opacity 150ms ease-in-out 250ms;
 }
 
-.nav-list .list-item {
-    display: inline-block;
-    padding: 20px 10px;
-   
-
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
 }
-/*******Main******/
+
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+display: block;
+background: white;
+height: 2px;
+width: 2em;
+border-radius: 2px;
+position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+ /*******header Mobile responsive******/
+
+@media screen and (min-width:1200px){
+    .nav-toggle-label{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo{
+        grid-column: 2 / 3;
+     margin-top: 30px;
+    }
+    nav{
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+    nav ul {
+        display: flex;
+    }
+
+    nav li{
+margin-left: 3em;
+margin-bottom: 0;
+    }
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before{
+        transform: scale(1,1);
+    }
+}
+
+
+
+
+    /*******Main******/
 main{
     background: #84ffff;
     grid-area: main;
     border: 2px black solid;
     padding: 10px;
+    margin-top: 75px;
+    
     
 }
 .MainConatent{
@@ -182,6 +312,7 @@ main{
     border-radius: 5px black solid;
     text-align: center;
     padding: 10px ;
+    margin-top: 75px;
     
     
    
@@ -277,7 +408,7 @@ footer{
         grid-template-areas: 
         "MapTime MapTime MapTime "
         "SlideShow SlideShow SlideShow"
-        "nav nav nav"
+        "header header header"
         "Sidebar main main"
         "Sidebar Content1 Content2"
         "Sidebar Content3 Content4 "
@@ -294,7 +425,7 @@ footer{
         grid-template-areas: 
         "MapTime MapTime  "
         "SlideShow SlideShow"
-        "nav nav"
+        "header header"
         "main main"
         "Sidebar Content1"
          "Sidebar Content2"
@@ -314,7 +445,7 @@ footer{
         grid-template-areas: 
         "MapTime"
         "SlideShow"
-        "nav"
+        "header"
         "main"
         "Content1"
         "Content2"
