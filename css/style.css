@@ -70,12 +70,13 @@
 @media (max-width:650px) {
     #MapTime{
 grid-template-columns: 1fr;
-grid-template-rows: 1fr; 
+grid-template-rows: 1fr;
+
 
 }
 #MapTime .header-contact-phone-number li{
    padding-left: 10px;
-   
+    
 }
 
 }
@@ -109,6 +110,13 @@ grid-template-rows: 1fr;
     color: white;
 }
 
+@media (max-width:650px){
+    #SlideShow{
+        margin-top: -20px;   
+    }
+
+}
+
 /*******header******/
 header{
    grid-area: header;
@@ -120,6 +128,12 @@ header{
    height: 100px;
    z-index: 999;
  
+}
+
+@media (max-width:650px){
+    header{     
+        margin-top: 30px;    
+     }
 }
 
 nav{
@@ -256,15 +270,18 @@ margin-bottom: 0;
 
     /*******Main******/
 main{
-    background: #84ffff;
+    background: black;
     grid-area: main;
-    border: 2px black solid;
     padding: 10px;
     margin-top: 75px;
-    
+    color: white;
     
 }
-
+@media (max-width:650px){
+ main{
+    margin-top: 120px;
+ }
+}
 
 .MainConatent{
     display: grid;
@@ -313,11 +330,15 @@ main{
     grid-auto-flow: dense;
     border-radius: 5px black solid;
     text-align: center;
-    padding: 10px ;
-    margin-top: 75px;
-    
-    
+ padding-top: 78px;
    
+}
+
+@media (max-width:992px){
+    #Sidebar{
+        padding-top: 0px;
+       
+    }
 }
 
 
@@ -327,8 +348,9 @@ main{
 }
 .SideContent2{
     grid-area: SideContent2;
-    background: #232738;
+    background: black;
     margin-top: 30px;
+    color: white;
 }
 
 img{
@@ -349,9 +371,6 @@ p{
 }
 
 @media(max-width:1244){
-    #Sidebar{
-
-    }
     #Sidebar p{
 font-size: x-small;
     }
@@ -361,44 +380,52 @@ font-size: x-small;
 
 /*******Content1******/
 #Content1{
-    background: #6fffda;
+    background: black;
     grid-area: Content1;
+    color: white;
 }
 
 /*******Content2******/
 #Content2{
-    background: #73ffba;
+    background: red;
     grid-area: Content2;
+    color: white;
 }
 
 /*******Content3******/
 #Content3{
-     background: #6fffd2;
+     background: black;
      grid-area: Content3;
+     color: white;
 }
 /*******Content4******/
 #Content4{
-    background: #6fffda;
+    background: red;
     grid-area: Content4;
+    color: white;
 }
 
 /*******Content5******/
 #Content5{
-    background: #73ffba;
+    background: black;
     grid-area: Content5;
+    color: white;
 }
 
 /*******Content6******/
 #Content6{
-     background: #6fffd2;
+     background: red;
      grid-area: Content6;
+     color: white;
 }
 
 
 /*******Footer******/
 footer{
-    background: #1de9b6;
+    background: red;
     grid-area: footer;
+    height: 80px;
+    width: 100%;
     
 }
 
