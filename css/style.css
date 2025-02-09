@@ -81,6 +81,14 @@ grid-template-rows: 1fr;
 
 }
 
+@media (max-width:320px){
+    #MapTime .header-contact-phone-number li{
+        padding: 20px;
+         
+     }
+
+}
+
 .map{
  
   color: rgb(255, 255, 255);
