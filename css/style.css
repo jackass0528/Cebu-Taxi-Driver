@@ -74,24 +74,27 @@ grid-template-rows: 1fr;
 
 
 }
-#MapTime .header-contact-phone-number li{
-   padding-left: 10px;
-    
-}
+
 
 }
 
-@media (max-width:320px){
-    #MapTime .header-contact-phone-number li{
-        padding: 20px;
-         
-     }
-
+@media (max-width:375px){
+  
+     #MapTime{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+       height: auto;
+  
+     }  
+     #MapTime .header-contact-phone-number li{
+      margin-left: 10px;
+     
+    }
 }
 
 .map{
  
-  color: rgb(255, 255, 255);
+  color: rgb(107, 107, 107);
   text-decoration: underline; 
 
 }
@@ -121,6 +124,13 @@ grid-template-rows: 1fr;
 @media (max-width:650px){
     #SlideShow{
         margin-top: -20px;   
+    }
+
+}
+
+@media (max-width:375px){
+    #SlideShow{
+        margin-top: -16px;   
     }
 
 }
