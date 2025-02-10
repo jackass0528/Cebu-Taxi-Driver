@@ -36,17 +36,20 @@
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr 1.2fr 1fr;
+        grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr 1.2fr 1fr 1fr 1fr;
         grid-template-areas:
         "MapTime MapTime MapTime MapTime"
         "SlideShow SlideShow SlideShow SlideShow"
         "header header header header"
         "Sidebar main main main"
+        "Sidebar title-1 title-1 title-1"
         "Sidebar Content1 Content2 Content3"
+        "Sidebar title-2 title-2 title-2"
         "Sidebar Content4 Content5 Content6"
         "footer footer footer footer";
         gap: 0.2rem;
         margin-top: 80px;
+       
         
     }
 
@@ -347,7 +350,8 @@ main{
     grid-auto-flow: dense;
     border-radius: 5px black solid;
     text-align: center;
- padding-top: 78px;
+    padding-top: 78px;
+    
    
 }
 
@@ -362,11 +366,12 @@ main{
 .SideContent1{
     grid-area: SideContent1;
     background: red;
+    margin-bottom: 5px;
+   
 }
 .SideContent2{
     grid-area: SideContent2;
     background: black;
-    margin-top: 30px;
     color: white;
 }
 
@@ -392,7 +397,27 @@ p{
 font-size: x-small;
     }
 }
+/*******title-1******/
+#title-1{
+    background: yellow;
+    grid-area: title-1;
+    color: black;
+    text-align: center;
+    height: 100px;
+    padding: 30px;
 
+}
+
+/*******title-2******/
+#title-2{
+    background: yellow;
+    grid-area: title-2;
+    color: black;
+    text-align: center;
+    height: 100px;
+    padding: 30px;
+
+}
 
 
 /*******Content1******/
@@ -427,6 +452,7 @@ font-size: x-small;
     background: black;
     grid-area: Content5;
     color: white;
+    
 }
 
 /*******Content6******/
@@ -443,26 +469,12 @@ footer{
     grid-area: footer;
     height: 80px;
     width: 100%;
+ 
     
 }
 
 /*******Mobile Responsive******/
-@media (max-width:1200px){
-    .container{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-        grid-template-areas: 
-        "MapTime MapTime MapTime "
-        "SlideShow SlideShow SlideShow"
-        "header header header"
-        "Sidebar main main"
-        "Sidebar Content1 Content2"
-        "Sidebar Content3 Content4 "
-        "Sidebar Content5 Content6"
-        "footer footer footer";
-    }
- 
-}
+
 
 @media (max-width:992px){
     .container{
@@ -473,9 +485,11 @@ footer{
         "SlideShow SlideShow"
         "header header"
         "main main"
+        "title-1 title-1"
         "Sidebar Content1"
          "Sidebar Content2"
         "Sidebar Content3"
+        "title-2 title-2"
          "Sidebar Content4"
         "Sidebar Content5"
          "Sidebar Content6"
@@ -493,9 +507,11 @@ footer{
         "SlideShow"
         "header"
         "main"
+        "title-1"
         "Content1"
         "Content2"
         "Content3"
+        "title-2"
         "Content4"
         "Content5"
         "Content6"
@@ -513,9 +529,11 @@ footer{
         "SlideShow"
         "nav"
         "main"
+        "title-1"
         "Content1"
         "Content2"
         "Content3"
+        "title-2"
         "Content4"
         "Content5"
         "Content6"
