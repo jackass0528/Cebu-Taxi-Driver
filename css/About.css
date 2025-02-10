@@ -1,11 +1,26 @@
-
 .about{
-padding-top: 150px;
-  text-align: center;
+  grid-area: about;
+ text-align: center;
+ padding: 50px;
+ margin-top: 50px;
+}
+
+
+#container-about{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr;
+  grid-template-areas:
+  "MapTime MapTime MapTime MapTime"
+  "SlideShow SlideShow SlideShow SlideShow"
+  "header header header header"
+  "about about about about"
+  "footer footer footer footer";
+  gap: 0.2rem;
+  margin-top: 80px;
   background: black;
   color: white;
+ 
 }
 
-.container{
-  margin-top: -50px;
-}
