@@ -235,7 +235,7 @@ position: relative;
 
  /*******header Mobile responsive******/
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:650px){
     .nav-toggle-label{
         display: none;
     }
