@@ -149,6 +149,11 @@ header{
    z-index: 999;
  
 }
+.logo img{
+    margin-top: -20px;
+    width: 80px;
+    height: 80px;
+}
 
 @media (max-width:650px){
     header{     
