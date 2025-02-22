@@ -69,6 +69,9 @@
     
 }
 
+
+
+
 @media (max-width:650px) {
     #MapTime{
 grid-template-columns: 1fr;
@@ -158,6 +161,18 @@ header{
 @media (max-width:650px){
     header{     
         margin-top: 30px;    
+     }
+}
+
+@media (max-width:375px){
+    header{     
+        padding-top: 30px;    
+     }
+}
+
+@media (max-width:550px){
+    header{     
+        padding-top: 30px;    
      }
 }
 
@@ -298,15 +313,15 @@ main{
     background: black;
     grid-area: main;
     padding: 10px;
-    margin-top: 75px;
+    margin-top: 78px;
     color: white;
     text-align: center;
-    padding-top: 30px;
+    
     
 }
 @media (max-width:650px){
  main{
-    margin-top: 120px;
+    margin-top: 124px;
  }
 }
 
@@ -346,7 +361,6 @@ main{
 
 /*******SideBar******/
 #Sidebar{
-    background: #18ffff;
     grid-area: Sidebar;
     display: grid;
     grid-template-columns: 1.5fr;
@@ -357,24 +371,18 @@ main{
     grid-auto-flow: dense;
     border-radius: 5px black solid;
     text-align: center;
-    padding-top: 78px;
     
    
 }
 
-@media (max-width:992px){
-    #Sidebar{
-        padding-top: 0px;
-       
-    }
-}
+
 
 
 .SideContent1{
     grid-area: SideContent1;
     background: red;
     margin-bottom: 5px;
-    padding-top: 30px;
+    margin-top: 78px;
    
 }
 .SideContent2{
@@ -406,6 +414,14 @@ p{
 font-size: x-small;
     }
 }
+
+@media (max-width:650px){
+  .SideContent1{
+       margin-top: 124px;
+    }
+}
+
+
 /*******title-1******/
 #title-1{
     background: yellow;
@@ -641,8 +657,10 @@ footer{
 
 .fab img{
 	width: 60%;
-	transform: rotate(0deg);
+	transform: rotate(10deg);
 	transition: 0.4s;
+    width: 40px;
+    height: 40px;
 	
 }
 
@@ -678,6 +696,12 @@ footer{
 	background-color: #1565c0;
 	align-items: center;
 	margin-bottom: 10px;
+    
+}
+
+.item1 img{
+    width: 30px;
+    height: 30px;
 }
 
 .item2{
@@ -685,11 +709,23 @@ footer{
 	background-color: #2bf335;
 	margin-bottom: 10px;
 }
+
+.item2 img{
+    width: 30px;
+    height: 30px;
+}
+
+
 .item3{
 	transition: 0.2s;
 	background-color: #0db829;
 	margin-bottom: 10px;
 }
+.item3 img{
+    width: 30px;
+    height: 30px;
+}
+
 
 .item:hover{
 	cursor: pointer;
