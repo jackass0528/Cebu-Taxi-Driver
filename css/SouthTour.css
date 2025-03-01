@@ -20,7 +20,8 @@
 .MainSouth{
   text-align: center;
   grid-area: MainSouth;
-  padding-top: 130px
+  padding-top: 130px;
+  background: rgb(53, 221, 76);
 }
 
 
