@@ -392,6 +392,12 @@ main{
    
 }
 
+@media(max-width:375px){
+    #Sidebar{
+     margin-top: -124px;
+    }
+}
+
 @media(max-width:320px){
     #Sidebar{
      margin-top: -125px;
