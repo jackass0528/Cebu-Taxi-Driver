@@ -1,0 +1,30 @@
+#container-South{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr;
+  grid-template-areas:
+  "MapTime MapTime MapTime MapTime"
+  "SlideShow SlideShow SlideShow SlideShow"
+  "header header header header"
+  "MainSouth MainSouth MainSouth MainSouth"
+  "footer footer footer footer";
+  gap: 0.2rem;
+  margin-top: 80px;
+  background: black;
+  color: white;
+ 
+}
+
+
+.MainSouth{
+  text-align: center;
+  grid-area: MainSouth;
+  padding-top: 130px
+}
+
+
+
+
+
+/**************************** Start payment Section *************************/
