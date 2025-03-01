@@ -88,11 +88,14 @@ grid-template-rows: 1fr;
      #MapTime{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-       height: auto;
+        height: auto;
+       
   
      }  
      #MapTime .header-contact-phone-number li{
-      margin-left: 10px;
+      margin-left: 15px;
+      display: flex;
+      flex-wrap: nowrap;
      
     }
 }
@@ -135,7 +138,7 @@ grid-template-rows: 1fr;
 
 @media (max-width:375px){
     #SlideShow{
-        margin-top: -34px;   
+        margin-top: -16px;   
     }
 
 }
@@ -172,7 +175,7 @@ header{
 
 @media (max-width:375px){
     header{     
-        margin-top: 15px;  
+        margin-top: 22px;  
      }
 }
 @media (max-width:320px){
@@ -338,7 +341,7 @@ main{
 
 @media (max-width:375px){
     main{
-       margin-top: 108px;
+       margin-top: 118px;
     }
    }
 
@@ -390,6 +393,11 @@ main{
     text-align: center;
     
    
+}
+@media(max-width:550px){
+    #Sidebar{
+     margin-top: -130px;
+    }
 }
 
 @media(max-width:375px){
