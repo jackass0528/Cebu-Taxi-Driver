@@ -107,7 +107,7 @@ grid-template-rows: 1fr;
 
 }
 
-.map a:hover{
+.map{
     color: rgba(18, 76, 236, 0.938);
 }
 
@@ -121,7 +121,7 @@ grid-template-rows: 1fr;
     color: white;
 }
 
- #MapTime .header-contact-phone-number li a:hover{
+ #MapTime .header-contact-phone-number li{
     color: rgba(18, 76, 236, 0.938);
 }
 
