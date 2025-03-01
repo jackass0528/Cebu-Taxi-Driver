@@ -139,6 +139,12 @@ grid-template-rows: 1fr;
     }
 
 }
+@media (max-width:320px){
+    #SlideShow{
+        margin-top: -15px;   
+    }
+
+}
 
 /*******header******/
 header{
@@ -166,7 +172,12 @@ header{
 
 @media (max-width:375px){
     header{     
-        margin-top: 8px;  
+        margin-top: 15px;  
+     }
+}
+@media (max-width:320px){
+    header{     
+        margin-top: 20px;  
      }
 }
 
@@ -327,7 +338,7 @@ main{
 
 @media (max-width:375px){
     main{
-       margin-top: 100px;
+       margin-top: 108px;
     }
    }
 
