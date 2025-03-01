@@ -245,6 +245,22 @@ header{
      }
 }
 
+/******Drop Down Start*****/
+nav .dropdown{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: #0db829;
+    display: none;
+}
+
+nav .dropdown li{
+margin: 5px 10px;
+}
+
+/******Drop Down end*****/
+
 nav{
     position: absolute;
     text-align: left;
