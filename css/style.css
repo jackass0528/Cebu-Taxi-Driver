@@ -135,7 +135,7 @@ grid-template-rows: 1fr;
 
 @media (max-width:375px){
     #SlideShow{
-        margin-top: -16px;   
+        margin-top: -34px;   
     }
 
 }
@@ -166,7 +166,7 @@ header{
 
 @media (max-width:375px){
     header{     
-        padding-top: 30px;    
+        margin-top: 8px;  
      }
 }
 
@@ -325,6 +325,12 @@ main{
  }
 }
 
+@media (max-width:375px){
+    main{
+       margin-top: 100px;
+    }
+   }
+
 .MainConatent{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -375,6 +381,11 @@ main{
    
 }
 
+@media(max-width:320px){
+    #Sidebar{
+     margin-top: -125px;
+    }
+}
 
 
 
