@@ -125,6 +125,50 @@ grid-template-rows: 1fr;
     color: rgba(18, 76, 236, 0.938);
 }
 
+@media (max-width:320px){
+  
+    #MapTime{
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+       height: auto;
+      
+ 
+    }  
+    #MapTime .header-contact-phone-number li{
+     margin-left: 15px;
+     display: flex;
+     flex-wrap: nowrap;
+   
+    
+   }
+}
+
+.map a{
+ color: white;
+ text-decoration: underline;
+
+}
+
+.map{
+   color: rgba(18, 76, 236, 0.938);
+}
+
+
+#MapTime .header-contact-phone-number li{
+   display: inline-block;
+
+  
+}
+#MapTime .header-contact-phone-number li a{
+   color: white;
+}
+
+#MapTime .header-contact-phone-number li{
+   color: rgba(18, 76, 236, 0.938);
+}
+
+
+
 /*******SlideShow******/
 #SlideShow{
     background: black;
