@@ -634,10 +634,42 @@ footer{
     grid-area: footer;
     height: 80px;
     width: 100%;
- 
     
 }
 
+.footer_main{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background: #070b1d;
+    
+}
+
+.SocialMeadia{
+    background: #1565c0;
+    margin: 10px;
+
+}
+
+.SocialMeadia ul li{
+    display: block;
+}
+.footerContact{
+    background: #232738;
+    margin: 10px
+}
+.footerContact ul li{
+    display: block;
+}
+
+.features{
+    background: #ce0707;
+    margin: 10px
+}
+
+.features ul li{
+    display: block;
+}
 /*******Mobile Responsive******/
 
 
