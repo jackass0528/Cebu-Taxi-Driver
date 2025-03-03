@@ -642,9 +642,32 @@ footer{
     flex-wrap: nowrap;
     justify-content: space-around;
     background: #070b1d;
+    margin: 10px;
     
 }
 
+@media (max-width: 320px){
+    .footer_main{
+        display: flex;
+        flex-direction: column
+        ;
+    }
+}
+
+@media (max-width: 375px){
+    .footer_main{
+        display: flex;
+        flex-direction: column
+        ;
+    }
+}
+@media (max-width: 550px){
+    .footer_main{
+        display: flex;
+        flex-direction: column
+        ;
+    }
+}
 .SocialMeadia{
     background: #1565c0;
     margin: 10px;
