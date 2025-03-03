@@ -62,7 +62,7 @@
     grid-template-rows: 1fr;
     padding-top: 10px;
     text-align: center;
-    position: fixed;
+    position: absolute;
     height: 60px;
     margin-top: -80px;
     width: 100%;
@@ -173,7 +173,7 @@ grid-template-rows: 1fr;
 #SlideShow{
     background: black;
     grid-area: SlideShow;
-    position: fixed;
+    position: absolute;
     height: 50px;
     margin-top: -50px;
     
@@ -209,7 +209,7 @@ header{
    grid-area: header;
    background-color: var(--background);
    text-align: center;
-   position: fixed;
+   position: absolute;
    width: 100%;
    margin-top: -15px;
    height: 100px;
