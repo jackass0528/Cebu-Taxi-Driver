@@ -76,7 +76,7 @@
     #MapTime{
 grid-template-columns: 1fr;
 grid-template-rows: 1fr;
-
+position: relative;
 
 }
 
@@ -131,6 +131,7 @@ grid-template-rows: 1fr;
        grid-template-columns: 1fr;
        grid-template-rows: 1fr;
        height: auto;
+       position: absolute;
       
  
     }  
@@ -186,7 +187,8 @@ grid-template-rows: 1fr;
 
 @media (max-width:650px){
     #SlideShow{
-        margin-top: -20px;   
+        margin-top: -20px;  
+        position: relative; 
     }
 
 }
@@ -199,7 +201,8 @@ grid-template-rows: 1fr;
 }
 @media (max-width:320px){
     #SlideShow{
-        margin-top: -15px;   
+        margin-top: -15px;  
+        position: absolute; 
     }
 
 }
@@ -224,7 +227,9 @@ header{
 
 @media (max-width:650px){
     header{     
-        margin-top: 30px;    
+        margin-top: 30px;
+        position: relative; 
+       
      }
 }
 
@@ -236,6 +241,7 @@ header{
 @media (max-width:320px){
     header{     
         margin-top: 20px;  
+        position: absolute;
      }
 }
 
