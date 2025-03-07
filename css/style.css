@@ -175,11 +175,12 @@ grid-template-rows: 1fr;
 #SlideShow{
     background: black;
     grid-area: SlideShow;
-    position: relative;
+    position: absolute;
     height: 50px;
     margin-top: -50px;
     
 }
+
 
 .moving-text{
     margin-top: 10px;
