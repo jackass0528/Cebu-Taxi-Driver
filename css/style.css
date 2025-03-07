@@ -175,7 +175,7 @@ grid-template-rows: 1fr;
 #SlideShow{
     background: black;
     grid-area: SlideShow;
-    position: absolute;
+    position: relative;
     height: 50px;
     margin-top: -50px;
     
