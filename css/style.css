@@ -262,16 +262,18 @@ header{
 }
 
 /******Drop Down Start*****/
-nav .dropdown{
+nav .list-navdropdown{
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     background-color: #0db829;
-    display: none;
+  
 }
 
-nav .dropdown li{
+
+
+nav .list-navdropdown li{
 margin: 5px 10px;
 }
 
@@ -939,11 +941,7 @@ footer{
 
 /*******************end floting chatbox***********/
 
-/*****************End main container*************/
-
-   
-    
-    #back-to-top-btn{
+  #back-to-top-btn{
         position: fixed;
         bottom: 0px;
         left: 10px;       
@@ -952,6 +950,27 @@ footer{
         width: 20px;
         height: 20px;
     }
+
+
+/*****************Start Dropdown Content*************/
+
+.dropdown-content {
+    cursor: pointer;
+}
+
+.dropdown-content a{
+background-color: #9ea0a3;
+text-decoration: none;
+
+
+}
+
+
+/*****************End main container*************/
+
+   
+    
+  
 
 
    
