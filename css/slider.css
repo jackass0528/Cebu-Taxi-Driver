@@ -142,6 +142,7 @@
 .pre-btn img,
 .nxt-btn img{
   opacity: 0.2;
+  background-color: white;
 }
 
 .pre-btn:hover img,
@@ -150,6 +151,36 @@
 }
 
 .collection-container {
+ width: 100%;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-gap: 10px;
 
-  
 }
+ .collection {
+  position: relative;
+ }
+
+ .collection img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+ }
+
+ .collection p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  columns: white;
+  font-size: 50px;
+  text-transform: capitalize;
+
+ }
+
+ .collection:nth-child(3) {
+grid-column: span 2;
+margin-bottom: 10px;
+ }
