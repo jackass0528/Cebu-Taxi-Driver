@@ -49,9 +49,6 @@
 <body>
 
 
-
-
-
 <div class="container">
     <!---------MapTime---------->
   <div id="MapTime">
@@ -141,13 +138,25 @@
   <!---------Main---------->
   <main>
     <h1>Cebu Taxi Driver | Powered by: SouthSpeed Hunter</h1>
-<div class="gallery">
+
+<div class="gallery-wrap">
+  <img src="image/back.png" id="backBtn">
+
+  <div class="gallery">
 <div>
   <span><img src="image/image-1.png" alt=""></span>
   <span><img src="image/image-2.png" alt=""></span>
   <span><img src="image/image-3.png" alt=""></span>
 </div>
+<div>
+  <span><img src="image/image-4.png" alt=""></span>
+  <span><img src="image/image-5.png" alt=""></span>
+  <span><img src="image/image-6.png" alt=""></span>
+</div>
 
+</div>
+
+  <img src="image/next.png" id="nextBtn">
 </div>
 
 
@@ -417,6 +426,28 @@
 </script>
 <!---end Chatbox Section---->
 
+
+ <script>
+  let scrollContainer = document.querySelector(".gallery");
+  let backBnt = document.getElementById("backBnt");
+  let nextBnt = document.getElementById("nextBnt");
+
+   scrollContainer.addEventListener("wheel", (evt) => {
+evt.preventDefault();
+scrollContainer.scrollLeft += evt.deltaY;
+
+   });
+
+   nextBnt.addEventListener("click", ()=>{
+    scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft += 900;
+  });
+
+     backBnt.addEventListener("click", ()=>{
+       scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft -= 900;
+  });
+ </script>
 
 
 
