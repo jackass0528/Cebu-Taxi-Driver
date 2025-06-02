@@ -20,5 +20,24 @@ window.scrollTo(0, 0);
 
 
 
+//Slider
+  let scrollContainer = document.querySelector(".gallery");
+  let backBnt = document.getElementById("backBnt");
+  let nextBnt = document.getElementById("nextBnt");
 
+   scrollContainer.addEventListener("wheel", (evt) => {
+evt.preventDefault();
+scrollContainer.scrollLeft += evt.deltaY;
+scrollContainer.style.scrollBehavior = "auto";
+
+   });
+   document.getElementById("nextBtn").addEventListener("click", ()=>{
+    scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft += 900;
+  });
+
+     document.getElementById("backBtn").addEventListener("click", ()=>{
+       scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft -= 900;
+  });
 
