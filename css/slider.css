@@ -15,7 +15,7 @@
 }
 
 .gallery div img{
-  width: 100%;
+max-width: 100%;
 filter: grayscale(100%);
 transition: trasform 0.5s;
 }
@@ -47,14 +47,9 @@ transform: scale(1.1);
 
 @media (max-width:320px){
 .gallery{
-  width: 100px;
+  max-width: 100px;
 
 }
 
-.gallery div img{
-  width: 180px;
-  height: 100px;
-
-}
 
    }  
