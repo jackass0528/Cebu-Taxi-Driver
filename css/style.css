@@ -188,6 +188,14 @@ grid-template-rows: 1fr;
     color: white;
 }
 
+@media (max-width:1024px){
+    #SlideShow{
+        margin-top: -30px;  
+        position: relative; 
+    }
+
+}
+
 @media (max-width:933px){
     #SlideShow{
         margin-top: -20px;  
