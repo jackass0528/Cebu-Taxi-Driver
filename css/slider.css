@@ -3,6 +3,7 @@
   display: flex;
   overflow-x: scroll;
 }
+ 
 
 .gallery div{
   width: 100%;
@@ -43,3 +44,17 @@ cursor: pointer;
 transform: scale(1.1);
 
 }
+
+@media (max-width:320px){
+.gallery{
+  width: 100px;
+
+}
+
+.gallery div img{
+  width: 180px;
+  height: 100px;
+
+}
+
+   }  
