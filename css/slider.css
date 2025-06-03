@@ -47,9 +47,31 @@ transform: scale(1.1);
 
 @media (max-width:320px){
 .gallery{
-  max-width: 100px;
+  max-width: 150px;
 
 }
 
+.gallery div{
+ 
+  display: grid;
+  width: auto;
+  grid-template-columns: auto auto auto;
+   padding: 1px;
+   justify-content: center;
 
+}
+
+ .gallery img{
+  width: 150px;
+  height: 100px;
+ 
+ }
+
+
+#backBtn, #nextBtn{
+  width: 30px;
+  height: 15px;
+margin: 20px;
+
+}
    }  
