@@ -47,9 +47,18 @@ transform: scale(1.1);
 @media (max-width:360px){
 .gallery{
 background: green;
-width: 250px;
+width: 200px;
 height: 200px;
 }
 
+.gallery div img{
+  width: 150px;
+  height: 80px;
+}
+
+#backBtn, #nextBtn{
+  width: 30px;
+  height: 15px;
+}
 
 }
