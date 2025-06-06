@@ -63,3 +63,11 @@ transform: scale(1.1);
  }
 
 }
+
+@media screen and (max-width:412px){
+ .slider-container{
+  width: 300px;
+  background-color: rgb(38, 0, 255);
+ }
+
+}
