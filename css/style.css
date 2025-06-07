@@ -1009,7 +1009,12 @@ footer{
         height: 20px;
     }
 
+@media (max-width:320px){
+  #back-to-top-btn{
+        left: -50px;       
+    }
 
+}
 /*****************Start Dropdown Content*************/
 
 .dropdown-content {
