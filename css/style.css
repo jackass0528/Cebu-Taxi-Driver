@@ -1000,7 +1000,7 @@ footer{
 /*******************end floting chatbox***********/
 
   #back-to-top-btn{
-        position: fixed;
+        position: relative;
         bottom: 0px;
         left: 10px;       
     }
@@ -1010,6 +1010,13 @@ footer{
     }
 
 @media (max-width:320px){
+  #back-to-top-btn{
+        left: -50px;       
+    }
+
+}
+
+@media (max-width:412px){
   #back-to-top-btn{
         left: -50px;       
     }
