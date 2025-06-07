@@ -1,5 +1,11 @@
+ .main-container{
+  width: 100%;
+  
+ }
+
 .slider-container{
   background-color: aliceblue;
+margin-left: 50px;
 }
 
 .gallery{
@@ -50,7 +56,7 @@ transform: scale(1.1);
 }
 @media screen and (max-width:320px){
  .main-container{
-  width: 300px;
+  width: 100%;
   background-color: aqua;
  }
 
