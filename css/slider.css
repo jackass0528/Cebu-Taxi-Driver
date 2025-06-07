@@ -56,10 +56,15 @@ transform: scale(1.1);
 }
 @media screen and (max-width:320px){
  .main-container{
+  position: relative;
   width: 100%;
   background-color: aqua;
  }
 
+ .slider-container{
+  background-color: rgb(37, 199, 22);
+
+}
 }
 
 @media screen and (max-width:375px){
@@ -67,7 +72,10 @@ transform: scale(1.1);
   width: 300px;
   background-color: aqua;
  }
+ .slider-container{
+  background-color: rgb(199, 52, 22);
 
+}
 
 }
 
@@ -76,6 +84,11 @@ transform: scale(1.1);
   width: 300px;
   background-color: aqua;
  }
+ .slider-container{
+  align-items: center;
+  width: 50%;
+  background-color: rgb(49, 22, 199);
 
+}
 
 }
