@@ -105,6 +105,12 @@ transform: scale(1.1);
   background-color: rgb(49, 22, 199);
 
 }
+.gallery div img{
+max-width: 60px;
+height: 4a0px;
+filter: grayscale(100%);
+transition: trasform 0.5s;
+}
 
 .gallery-wrap{
   position: relative;
