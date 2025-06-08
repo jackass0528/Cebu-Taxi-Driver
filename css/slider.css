@@ -66,6 +66,12 @@ transform: scale(1.1);
 
 }
 
+.gallery div img{
+max-width: 60px;
+height: 40px;
+
+}
+
  .slider-container{
   margin-right: 50px;
   width: 100%;
@@ -81,6 +87,13 @@ transform: scale(1.1);
  }
  .slider-container{
   background-color: rgb(199, 52, 22);
+
+  
+}
+
+.gallery div img{
+max-width: 60px;
+height: 40px;
 
 }
  .slider-container{
@@ -107,9 +120,8 @@ transform: scale(1.1);
 }
 .gallery div img{
 max-width: 60px;
-height: 4a0px;
-filter: grayscale(100%);
-transition: trasform 0.5s;
+height: 40px;
+
 }
 
 .gallery-wrap{
