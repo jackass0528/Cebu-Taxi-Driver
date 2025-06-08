@@ -58,7 +58,7 @@ transform: scale(1.1);
  .main-container{
   position: relative;
   width: 100%;
-  background-color: aqua;
+  background-color:rgb(37, 199, 22);
  }
 
  .slider-container{
@@ -70,7 +70,7 @@ transform: scale(1.1);
 @media screen and (max-width:375px){
  .main-container{
   width: 300px;
-  background-color: aqua;
+  background-color: rgb(255, 94, 0);
  }
  .slider-container{
   background-color: rgb(199, 52, 22);
@@ -81,14 +81,25 @@ transform: scale(1.1);
 
 @media screen and (max-width:412px){
  .main-container{
-  width: 300px;
-  background-color: aqua;
+  display: block;
+  width: 360px;
+  background-color: rgb(49, 22, 199);
  }
  .slider-container{
   align-items: center;
-  width: 50%;
+  width: 100%;
   background-color: rgb(49, 22, 199);
 
+}
+.gallery-wrap{
+margin-right: 80px;
+
+}
+
+#backBtn, #nextBtn{
+ 
+  position: relative;
+  margin: -10px;
 }
 
 }

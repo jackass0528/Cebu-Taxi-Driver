@@ -437,9 +437,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
 }
-   .main-container h1{
-    color: black;
-   }
+  
 
 @media (max-width:650px){
  main{
