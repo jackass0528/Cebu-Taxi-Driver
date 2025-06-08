@@ -107,6 +107,7 @@ transform: scale(1.1);
 }
 
 .gallery-wrap{
+  position: relative;
   width: 360px;
  background-color: rgb(49, 22, 199);
   margin: 20% auto;
