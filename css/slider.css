@@ -130,14 +130,13 @@ height: 60px;
 
 .gallery-wrap{
   position: relative;
-  width: 340px;
+  width: 360px;
  background-color: rgb(22, 199, 140);
-  margin: 20% auto;
+  margin: 10px;
 }
 #backBtn, #nextBtn{
   width: 30px;
   height: 20px;
-  margin: 5px;
 }
 
 
