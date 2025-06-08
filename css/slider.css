@@ -54,6 +54,8 @@ cursor: pointer;
 transform: scale(1.1);
 
 }
+
+/***
 @media screen and (max-width:320px){
  .main-container{
   position: relative;
@@ -118,8 +120,9 @@ height: 40px;
   background-color: rgb(49, 22, 199);
 
 }
+
 .gallery div img{
-max-width: 80px;
+max-width: 100px;
 height: 60px;
 
 }
@@ -141,3 +144,5 @@ height: 60px;
 
 
 }
+
+****/
