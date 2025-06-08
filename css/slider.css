@@ -112,8 +112,6 @@ transform: scale(1.1);
   margin: 20% auto;
 }
 
-#backBtn, #nextBtn{
-  margin: -40px;
-}
+
 
 }
