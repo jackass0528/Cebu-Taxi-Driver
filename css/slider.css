@@ -108,7 +108,7 @@ height: 40px;
 ****/
 
 
-@media screen and (max-width:412px){
+@media screen and (max-width:375px){
 
  .main-container{
   width: auto-fit;
@@ -119,22 +119,20 @@ height: 40px;
   margin-right: 90px;
   width: 280px;
 
-
 }
 
 .gallery div img{
-max-width: 50px;
+max-width: 70px;
 height: 40px;
 margin: -8px;
 
-
 }
-
 
 .gallery-wrap{
   width: 350px;
-  margin: -5px;
+  
 }
+
 #backBtn, #nextBtn{
   width: 30px;
   height: 20px;
