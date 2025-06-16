@@ -1,7 +1,42 @@
  .main-container{
   width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1fr 1fr 1fr;
 
  }
+
+ @media screen and (max-width:375px){
+ .main-container{
+grid-row: 200px;
+grid-column: 300px;
+background-color: aqua;
+
+ }
+.slider-container{
+width: 320px;
+margin-right: 50px;
+}
+.gallery-wrap{
+background-color: green;
+width: 280px;
+
+}
+.gallery{
+  width: 320px;
+}
+
+.gallery div img{
+width: 150px;
+height: 80px;
+
+}
+
+#backBtn, #nextBtn{
+padding: 5px;
+
+}
+
+}
 
 .slider-container{
 margin-left: 50px;
@@ -105,7 +140,7 @@ height: 40px;
 
 }
 }
-****/
+
 
 
 @media screen and (max-width:375px){
@@ -142,3 +177,4 @@ margin: -8px;
 
 }
 
+****/
