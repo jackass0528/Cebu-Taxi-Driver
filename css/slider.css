@@ -9,7 +9,6 @@
  .main-container{
 grid-row: 200px;
 grid-column: 300px;
-background-color: aqua;
 
  }
 .slider-container{
@@ -17,15 +16,14 @@ width: 320px;
 margin-right: 50px;
 }
 .gallery-wrap{
-background-color: green;
-width: 280px;
+width: 320px;
 
 }
 .gallery{
   width: 320px;
 }
 
-.gallery div img{
+.gallery .item img{
 width: 150px;
 height: 80px;
 
@@ -39,30 +37,32 @@ padding: 5px;
 }
 
 .slider-container{
-margin-left: 50px;
+margin-left: 10px;
 }
 
 .gallery{
-  width: 100%;
+  width: 50%;
   display: flex;
   overflow-x: scroll;
 }
  
 
-.gallery div {
+.gallery .item {
   width: 100%;
   display: grid;
   justify-content: space-evenly;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   grid-gap: 20px;
   padding: 10px;
   flex: none;
 }
 
-.gallery div img{
+
+.gallery .item img{
 max-width: 100%;
 filter: grayscale(10%);
 transition: trasform 0.5s;
+margin: 10px;
 }
 
 .gallery::-webkit-scrollbar{
@@ -73,17 +73,18 @@ display: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10% auto;
+  margin: 10px auto;
 }
 
 #backBtn, #nextBtn{
   width: 50px;
   height: 40px;
   cursor: pointer;
-  margin: 20px;
+  margin: 10px;
+  z-index: 1;
 }
 
-.gallery div img:hover{
+.gallery .item img:hover{
 filter: grayscale(0);
 cursor: pointer;
 transform: scale(1.1);
