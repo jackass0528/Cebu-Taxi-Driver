@@ -425,7 +425,6 @@ margin-bottom: 0;
 main{
     background: black;
     grid-area: main;
-    padding: 10px;
     margin-top: -2px;
     color: white;
     text-align: center;
@@ -436,6 +435,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
   
 
@@ -462,7 +462,7 @@ main{
 .MainConatent{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
     border: 2px black solid;
     padding-left: 50px;
@@ -871,7 +871,7 @@ footer{
 	align-items: center;
 	justify-content: center;
 	margin-top: 50%;
-	
+  
 }
 
 .fab-Contact-us{
@@ -897,12 +897,13 @@ footer{
 	width: 10px;
 	height: 10px;
 	transform: rotate(45deg);
-	margin-left: 95px;
+	margin-left: 80px;
 	background-color: white;
 }
 
 .fab:hover{
 	cursor: pointer;
+    background-color: #f3f5f3;
 }
 
 .fab img{
