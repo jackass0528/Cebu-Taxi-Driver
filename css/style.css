@@ -1206,6 +1206,10 @@ text-decoration: none;
                  .slider-container{
          margin-left: 0px;
             }
+
+               .slide img{
+                margin-left: 40px;
+              }
         }
 
         @media (max-width: 480px) {
@@ -1228,7 +1232,7 @@ text-decoration: none;
             }
 
             .slider-container{
-         margin-left: 0px;
+            margin-left: 0px;
             }
 
               .slide img{
