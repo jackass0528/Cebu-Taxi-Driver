@@ -1,3 +1,4 @@
+
 #container-South{
   display: grid;
   height: 100vh;
@@ -16,13 +17,29 @@
  
 }
 
-
 .MainSouth{
+  display: grid;
   text-align: center;
   grid-area: MainSouth;
   padding-top: 130px;
-  background: rgb(53, 221, 76);
+  background: rgb(2, 0, 0);
 }
+
+.South-content1{
+  text-align: center;
+  grid-area: slider;
+  padding-top: 130px;
+  background: rgb(255, 255, 255);
+}
+
+.South-content2{
+    text-align: center;
+  grid-area: South-content2;
+  padding-top: 130px;
+  background: rgb(16, 144, 187);
+}
+
+
 
 
 
