@@ -419,8 +419,6 @@ margin-bottom: 0;
 
 
 
-
-
     /*******Main******/
 main{
     background: black;
@@ -428,16 +426,10 @@ main{
     margin-top: -2px;
     color: white;
     text-align: center;
+    padding-bottom: 50px;
    
 }
 
-    .main-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-  
 
 @media (max-width:650px){
  main{
@@ -459,17 +451,6 @@ main{
 
    }   
 
-.MainConatent{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    border: 2px black solid;
-    padding-left: 50px;
-    padding-top: 50px;
-   
-    
-}
 .box1{
     width: 100px;
     height: 100px;
@@ -507,8 +488,8 @@ main{
     text-align: center;
     margin-top: -80px;
     
-   
 }
+
 @media(max-width:650px){
     #Sidebar{
      margin-top: -124px;
@@ -531,7 +512,6 @@ main{
      margin-top: -125px;
     }
 }
-
 
 
 .SideContent1{
