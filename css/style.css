@@ -47,6 +47,7 @@
         "Sidebar Content1 Content2 Content3"
         "Sidebar title-2 title-2 title-2"
         "Sidebar Content4 Content5 Content6"
+        "Sidebar Content7 Content8 Content9"
         "footer footer footer footer";
         gap: 0.2rem;
         margin-top: 80px;
@@ -692,6 +693,59 @@ font-size: x-small;
     justify-content: center;
 }
 
+/*******Content7******/
+#Content7{
+     background: red;
+     grid-area: Content7;
+     color: white;
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.Content7   -container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*******Content8******/
+#Content8{
+     background: red;
+     grid-area: Content8;
+     color: white;
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.Content7   -container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*******Content9******/
+#Content9{
+     background: red;
+     grid-area: Content9;
+     color: white;
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.Content7   -container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 /*******Footer******/
 footer{
     background: red;
@@ -777,6 +831,9 @@ footer{
          "Sidebar Content4"
         "Sidebar Content5"
          "Sidebar Content6"
+        "Sidebar Content7"
+        "Sidebar Content8"
+         "Sidebar Content9"
         "footer footer";
     }
  
@@ -802,6 +859,9 @@ footer{
         "Content4"
         "Content5"
         "Content6"
+        "Content7"
+        "Content8"
+        "Content9"
         "Sidebar"
         "footer";
     }
@@ -825,6 +885,9 @@ footer{
         "Content4"
         "Content5"
         "Content6"
+        "Content7"
+        "Content8"
+        "Content9"
         "Sidebar"
         "footer";
     }
