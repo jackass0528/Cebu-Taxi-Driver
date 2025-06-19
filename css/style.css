@@ -270,7 +270,7 @@ header{
      }
 }
 
-/******Drop Down Start*****/
+/******Drop Down Start
 nav .list-navdropdown{
     position: relative;
     display: flex;
@@ -286,7 +286,7 @@ nav .list-navdropdown li{
 margin: 5px 10px;
 }
 
-/******Drop Down end*****/
+Drop Down end*****/
 
 nav{
     position: absolute;
