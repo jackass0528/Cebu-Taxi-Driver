@@ -2,7 +2,7 @@
 #container-South{
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr;
   grid-template-areas:
   "MapTime MapTime MapTime MapTime"
@@ -10,10 +10,6 @@
   "header header header header"
   "MainSouth MainSouth MainSouth MainSouth"
   "footer footer footer footer";
-  gap: 0.2rem;
-  margin-top: 80px;
-  background: black;
-  color: white;
  
 }
 
@@ -21,22 +17,40 @@
   display: grid;
   text-align: center;
   grid-area: MainSouth;
-  padding-top: 130px;
-  background: rgb(2, 0, 0);
+  padding-top: 50px;
+  background: rgb(0, 0, 2);
+  color: aliceblue;
+}
+
+#MainSouthContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider-container{
+  margin: 20px;
+  text-align: center;
+  grid-area: slider-container;
+  background: rgb(126, 7, 7);
+
 }
 
 .South-content1{
   text-align: center;
-  grid-area: slider;
-  padding-top: 130px;
-  background: rgb(255, 255, 255);
+  background: rgb(126, 7, 7);
+  margin: 20px;
+}
+
+.South-image1{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .South-content2{
-    text-align: center;
-  grid-area: South-content2;
-  padding-top: 130px;
+  width: 100%;
+  text-align: center;
   background: rgb(16, 144, 187);
+  margin: 20px;
 }
 
 
