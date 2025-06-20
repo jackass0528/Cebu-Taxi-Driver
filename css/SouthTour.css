@@ -29,9 +29,19 @@
 
 .slider-container{
   margin: 20px;
+  height: auto;
   text-align: center;
   grid-area: slider-container;
   background: rgb(126, 7, 7);
+
+}
+
+.slider-nav{
+  margin-top: -150px;
+}
+
+.slider-dots{
+  margin-bottom: 150px;
 
 }
 
@@ -41,10 +51,12 @@
   margin: 20px;
 }
 
-.South-image1{
-  display: flex;
-  flex-wrap: nowrap;
+.SouthTitleContent1{
+  width: auto;
+  height: 40px;
+  background-color: blue;
 }
+
 
 .South-content2{
   width: 100%;
@@ -52,7 +64,11 @@
   background: rgb(16, 144, 187);
   margin: 20px;
 }
-
+.SouthTitleContent2{
+  width: auto;
+  height: 40px;
+  background-color: blue;
+}
 
 
 
