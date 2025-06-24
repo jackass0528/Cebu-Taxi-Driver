@@ -23,18 +23,24 @@
 }
 
 #MainSouthContainer{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 450px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "slider-container slider-container slider-container South-content1"
+  "South-content2 South-content2 South-content2 South-content2"
+  ;
 }
 
 .slider-container{
-  margin: 20px;
   height: auto;
   text-align: center;
   grid-area: slider-container;
   background: rgb(126, 7, 7);
 
 }
+
+
 
 .slider-nav{
   margin-top: -150px;
@@ -46,19 +52,24 @@
 }
 
 .South-content1{
+  z-index: 1;
+  grid-area: South-content1;
   text-align: center;
-  background: rgb(126, 7, 7);
-  margin: 20px;
+  background: rgb(44, 236, 172);
+
 }
+
 
 .SouthTitleContent1{
   width: auto;
   height: 40px;
   background-color: blue;
+ 
 }
 
 
 .South-content2{
+  grid-area: South-content2;
   width: 100%;
   text-align: center;
   background: rgb(16, 144, 187);
