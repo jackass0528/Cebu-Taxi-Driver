@@ -29,6 +29,7 @@
   grid-template-areas: 
   "slider-container slider-container slider-container South-content1"
   "South-content2 South-content2 South-content2 South-content2"
+  "South-content3 South-content3 South-content3 South-content3"
   ;
 }
 
@@ -41,7 +42,6 @@
 }
 
 
-
 .slider-nav{
   margin-top: -150px;
 }
@@ -51,22 +51,24 @@
 
 }
 
-.South-content1{
-  z-index: 1;
-  grid-area: South-content1;
-  text-align: center;
-  background: rgb(44, 236, 172);
-
-}
-
-
 .SouthTitleContent1{
   width: auto;
   height: 40px;
   background-color: blue;
  
 }
+.SouthTitleContent2{
+  width: auto;
+  height: 40px;
+  background-color: blue;
+}
 
+.South-content1{ 
+  grid-area: South-content1;
+  text-align: center;
+  background: rgb(44, 236, 172);
+
+}
 
 .South-content2{
   grid-area: South-content2;
@@ -75,37 +77,52 @@
   background: rgb(16, 144, 187);
   margin: 20px;
 }
-.SouthTitleContent2{
-  width: auto;
-  height: 40px;
-  background-color: blue;
+
+.South-content3{
+  grid-area: South-content3;
+  width: 100%;
+  text-align: center;
+  background: rgb(16, 144, 187);
+  margin: 20px;
 }
+
 
 
 
 @media (max-width: 768px){
 #MainSouthContainer{
+  background-color: rgb(202, 142, 65);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 350px;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "slider-container South-content1"
+  "slider-container slider-container South-content1"
   "South-content2 South-content2"
+  "South-content3 South-content3"
   ;
+  gap: 20px;
 }
 
 .slider-container{
   grid-area: slider-container;
 
 }
-
-.South-content2{
-  grid-area: South-content2;
-
-}
 .South-content1{
   grid-area: South-content1;
+  margin-right: 10px;
  
+}
+.South-content2{
+  width: 600px;
+  justify-self: center;
+  grid-area: South-content2;
+padding: 40px;
+}
+.South-content3{
+  grid-area: South-content3;
+   width: 600px;
+  justify-self: center;
+padding: 40px;
 }
 }
 
