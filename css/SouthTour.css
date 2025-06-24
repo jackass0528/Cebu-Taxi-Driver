@@ -83,7 +83,60 @@
 
 
 
+@media (max-width: 768px){
+#MainSouthContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 350px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "slider-container South-content1"
+  "South-content2 South-content2"
+  ;
+}
 
+.slider-container{
+  grid-area: slider-container;
 
+}
+
+.South-content2{
+  grid-area: South-content2;
+
+}
+.South-content1{
+  grid-area: South-content1;
+ 
+}
+}
+
+ @media (max-width: 480px){
+  
+#MainSouthContainer{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 350px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "slider-container"
+  "South-content1"
+  "South-content2"
+  ;
+
+}
+
+.slider-container{
+  grid-area: slider-container;
+
+}
+
+.South-content2{
+  grid-area: South-content2;
+
+}
+.South-content1{
+  grid-area: South-content1;
+ 
+
+}
+ }
 
 /**************************** Start payment Section *************************/
