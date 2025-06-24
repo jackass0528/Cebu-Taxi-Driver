@@ -137,6 +137,20 @@
  
 
 }
+
+#container-South{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr;
+  grid-template-areas:
+  "MapTime"
+  "SlideShow"
+  "header"
+  "MainSouth"
+  "footer";
+ 
+}
  }
 
 /**************************** Start payment Section *************************/
