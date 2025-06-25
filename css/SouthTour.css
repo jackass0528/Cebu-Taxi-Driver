@@ -23,14 +23,8 @@
 }
 
 #MainSouthContainer{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 450px;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-  "slider-container slider-container slider-container South-content1"
-  "South-content2 South-content2 South-content2 South-content2"
-  "South-content3 South-content3 South-content3 South-content3"
-  ;
+display: flex;
+flex-wrap: wrap;
 }
 
 .slider-container{
@@ -65,8 +59,10 @@
 
 .South-content1{ 
   grid-area: South-content1;
+  justify-content: center;
   text-align: center;
   background: rgb(44, 236, 172);
+  margin-left: 20px;
 
 }
 
@@ -89,89 +85,7 @@
 
 
 
-@media (max-width: 768px){
-#MainSouthContainer{
-  background-color: rgb(202, 142, 65);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 350px;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-  "slider-container slider-container South-content1"
-  "South-content2 South-content2"
-  "South-content3 South-content3"
-  ;
-  gap: 20px;
-}
 
-.slider-container{
-  grid-area: slider-container;
-
-}
-.South-content1{
-  grid-area: South-content1;
-  margin-right: 10px;
  
-}
-.South-content2{
-  width: 600px;
-  justify-self: center;
-  grid-area: South-content2;
-padding: 40px;
-}
-.South-content3{
-  grid-area: South-content3;
-   width: 600px;
-  justify-self: center;
-padding: 40px;
-}
-}
-
- @media (max-width: 480px){
-  
-#MainSouthContainer{
-  width: 480px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 350px;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-  "slider-container"
-  "South-content1"
-  "South-content2"
-  "South-content3"
-  ;
-
-}
-
-.slider-container{
-  width: 380px;
-  grid-area: slider-container;
-}
-
-#slider-container-id{
-  width: 450px;
-  margin-left: 10px;
- 
-}
-.South-content1{
-  width: 480px;
-  grid-area: South-content1;
-  margin-right: 10px;
- 
-}
-.South-content2{
-  width: 380px;
-  justify-self: center;
-  grid-area: South-content2;
-margin-right: 200px;
-}
-.South-content3{
-  width: 380px;
-  grid-area: South-content3;
-  justify-self: center;
-margin-right: 150px;
-}
-
-
- }
 
 /**************************** Start payment Section *************************/
