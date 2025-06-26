@@ -48,43 +48,92 @@ flex-wrap: wrap;
 .SouthTitleContent1{
   width: auto;
   height: 40px;
-  background-color: blue;
  
 }
 .SouthTitleContent2{
   width: auto;
   height: 40px;
-  background-color: blue;
+
 }
 
 .South-content1{ 
-  grid-area: South-content1;
   justify-content: center;
   text-align: center;
-  background: rgb(44, 236, 172);
   margin-left: 20px;
-
 }
 
 .South-content2{
-  grid-area: South-content2;
-  width: 100%;
+  justify-content: center;
+  width: 550px;
   text-align: center;
-  background: rgb(16, 144, 187);
-  margin: 20px;
+  margin-left: 50px;
+
 }
 
 .South-content3{
-  grid-area: South-content3;
+  justify-content: center;
   width: 100%;
   text-align: center;
-  background: rgb(16, 144, 187);
   margin: 20px;
 }
 
 
 
+  @media (max-width: 412px){
 
+#MainSouthContainer{
+display: flex;
+flex-wrap: wrap;
+}
+
+
+#slider-container-id{
+  width: 412px;
+  text-align: center;
+  grid-area: slider-container;
+  background: rgb(126, 7, 7);
+
+}
+
+.South-content3{ 
+  justify-content: center;
+  text-align: center;
+  width: 350px;
+  margin-left: 30px;
+ 
+}
+
+.South-content2{ 
+  justify-content: center;
+  text-align: center;
+  width: 350px;
+  margin-left: 30px;
+ 
+}
+
+.South-content1{ 
+  justify-content: center;
+  text-align: center;
+  width: 350px;
+  margin-left: 30px;
+  background-color: blue;
+}
+
+  }
+
+    @media (max-width: 768px){
+
+#MainSouthContainer{
+display: flex;
+flex-wrap: wrap;
+}
+.South-content2{ 
+  justify-content: center;
+  text-align: center;
+  width: 350px;
+  background-color: rgb(92, 214, 22);
+}
+  }
 
  
 
