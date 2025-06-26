@@ -84,7 +84,7 @@ background-color: blue;
 }
 .South-content3-img img{
   display: flex;
-width: 250px;
+width: 320px;
 }
 
 
@@ -97,18 +97,16 @@ flex-wrap: wrap;
 
 
 #slider-container-id{
-  width: 320px;
-  margin-left: 20px;
+  width: 460px;
+  margin-left: 10px;
   background: rgb(126, 7, 7);
 
 }
 
 .South-content3{ 
-  justify-content: center;
-  text-align: center;
   width: 320px;
-  margin-left: 30px;
- 
+   margin-top: 20px;
+   width: 460px;
 }
 
 .South-content2{ 
@@ -137,7 +135,9 @@ flex-wrap: wrap;
 .South-content2{ 
   justify-content: center;
   text-align: center;
-  width: 350px;
+   margin-top: 20px;
+   width: 460px;
+   padding: 20px;
   background-color: rgb(92, 214, 22);
 }
   }
