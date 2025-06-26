@@ -79,7 +79,7 @@ flex-wrap: wrap;
 
 
 
-  @media (max-width: 412px){
+  @media (max-width: 480px){
 
 #MainSouthContainer{
 display: flex;
