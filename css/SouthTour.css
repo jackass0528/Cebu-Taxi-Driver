@@ -72,11 +72,20 @@ flex-wrap: wrap;
 
 .South-content3{
   justify-content: center;
-  width: 100%;
+  width: auto;
   text-align: center;
   margin: 20px;
 }
 
+.South-content3-img{
+display: flex;
+flex-wrap: wrap;
+background-color: blue;
+}
+.South-content3-img img{
+  display: flex;
+width: 250px;
+}
 
 
   @media (max-width: 480px){
