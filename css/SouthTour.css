@@ -146,14 +146,14 @@ flex-wrap: wrap;
 .South-content3-img{
 display: flex;
 flex-direction: row;
-width: auto;
+width: 360px;
 background-color: blue      ;
 
 }
 
 .South-content3-img img{
   display: inline-block;
-  width: 220px;
+  width: 320px;
   height: auto;
 }
   }
@@ -187,9 +187,10 @@ width: 260px;
 
 }
 .SouthTitleContent3{
-  width: 290px;
+  width: 300px;
  
 }
+
  }
 
 
