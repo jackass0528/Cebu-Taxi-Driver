@@ -132,6 +132,7 @@ flex-wrap: wrap;
     @media (max-width: 768px){
 
 #MainSouthContainer{
+  width: 412px;
 display: flex;
 flex-wrap: wrap;
 }
@@ -146,8 +147,8 @@ flex-wrap: wrap;
 .South-content3-img{
 display: flex;
 flex-direction: row;
-width: 360px;
-background-color: blue      ;
+width: 340px;
+background-color: rgb(107, 175, 17)      ;
 
 }
 
