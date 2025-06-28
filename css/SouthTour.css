@@ -1272,7 +1272,10 @@ text-decoration: none;
             .slide-content h2 {
                 font-size: 1.2rem;
             }
+            .slider-nav .next-btn{
+            margin-right: 40px;
 
+            }
             .slider-nav button {
                 width: 40px;
                 height: 40px;
