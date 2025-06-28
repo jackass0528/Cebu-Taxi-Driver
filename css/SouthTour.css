@@ -429,7 +429,12 @@ main{
     color: white;
     text-align: center;
     padding-bottom: 50px;
-  
+    padding-top: 20px;
+}
+
+main h1{
+    background-color: #f3f5f3;
+    color: #070b1d;
 }
 
 
