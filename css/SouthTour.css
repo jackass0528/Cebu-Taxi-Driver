@@ -1256,6 +1256,9 @@ text-decoration: none;
         }
 
         @media (max-width: 480px) {
+                   .Slider-South{
+          margin-left: 20px;
+           }
             .slider {
                 height: 300px;
             }
