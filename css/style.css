@@ -427,10 +427,31 @@ main{
     margin-top: -2px;
     color: white;
     text-align: center;
-    padding-bottom: 50px;
-   
+    padding: 20px; 
+}
+.Contact-menu{
+    padding: 20px;
+    width: auto;
+    text-align: center;
+
 }
 
+.Contact-info{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Contact-info a{
+    display: inline;
+    margin: 5px;
+    width: 200px;
+    background-color: #f3f5f3;
+    color: #070b1d;
+    padding: 10px;
+    
+
+}
 
 @media (max-width:650px){
  main{
