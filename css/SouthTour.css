@@ -367,7 +367,7 @@ position: relative;
     top: 7px;
 }
 
- /*******header Mobile responsive******/
+ /*******Navbar header Mobile responsive******/
 
 @media screen and (min-width:650px){
     .nav-toggle-label{
@@ -435,8 +435,18 @@ main{
 main h1{
     background-color: #f3f5f3;
     color: #070b1d;
+    padding: 10px;
 }
 
+img{
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+p{
+    margin: 10px;
+}
 
 @media (max-width:650px){
  main{
@@ -457,113 +467,6 @@ main h1{
     }
 
    }   
-
-.box1{
-    width: 100px;
-    height: 100px;
-    background: red;
-    
- 
-}
-.box2{
-    width: 100px;
-    height: 100px;
-    background: red;
-}
-.box3{
-    width: 100px;
-    height: 100px;
-    background: red;
-}
-.box4{
-    width: 100px;
-    height: 100px;
-    background: red;
-}
-
-/*******SideBar******/
-#Sidebar{
-    grid-area: Sidebar;
-    display: grid;
-    grid-template-columns: 1.5fr;
-    grid-template-rows: 1fr 1fr ;
-    grid-template-areas: 
-    "Sidebar SideContent1"
-    "Sidebar SideContent2";
-    grid-auto-flow: dense;
-    border-radius: 5px black solid;
-    text-align: center;
-    margin-top: -80px;
-    
-}
-
-@media(max-width:650px){
-    #Sidebar{
-     margin-top: -124px;
-    }
-}
-@media(max-width:550px){
-    #Sidebar{
-     margin-top: -130px;
-    }
-}
-
-@media(max-width:375px){
-    #Sidebar{
-     margin-top: -124px;
-    }
-}
-
-@media(max-width:320px){
-    #Sidebar{
-     margin-top: -125px;
-    }
-}
-
-
-.SideContent1{
-    grid-area: SideContent1;
-    background: red;
-    margin-bottom: 5px;
-    margin-top: 78px;
-   
-}
-.SideContent2{
-    grid-area: SideContent2;
-    background: black;
-    color: white;
-    padding-top: 30px;
-}
-
-img{
-    margin: 10px;
-    width: 300px;
-    height: 200px;
-}
-
-p{
-    margin: 10px;
-}
-
-.SouhtList ul li{
-   list-style-type: none;
-}
-.NorthList ul li{
-    list-style-type: none;
-}
-
-@media(max-width:1244){
-    #Sidebar p{
-font-size: x-small;
-    }
-}
-
-@media (max-width:650px){
-  .SideContent1{
-       margin-top: 124px;
-    }
-}
-
 
 /*******title-1******/
 #title-1{
