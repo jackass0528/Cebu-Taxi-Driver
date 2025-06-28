@@ -861,16 +861,13 @@ footer{
         "header header"
         "main main"
         "title-1 title-1"
-        "Sidebar Content1"
-         "Sidebar Content2"
-        "Sidebar Content3"
+        "Content1 Content2"
+         "Content3 Content3"
         "title-2 title-2"
-         "Sidebar Content4"
-        "Sidebar Content5"
-         "Sidebar Content6"
-        "Sidebar Content7"
-        "Sidebar Content8"
-         "Sidebar Content9"
+         "Content4 Content5"
+         "Content6 Content7"
+        "Content8 Content9"
+        "Content10 Content11"
         "footer footer";
     }
  
@@ -899,6 +896,8 @@ footer{
         "Content7"
         "Content8"
         "Content9"
+         "Content10"
+        "Content11"
         "Sidebar"
         "footer";
     }
