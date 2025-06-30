@@ -767,6 +767,28 @@ font-size: x-small;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+/*******Content box for all******/
+.content-box{
+    background-color: #f3f5f3;
+    color: #070b1d;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.content-prices{
+  
+    color: #000000;
+    padding: 20px;
+    font-size: 20px;
+    text-align: start;
+}
+
+.book-btn{
+margin-top: 10px;
+background-color: #ce0707;
+padding: 10px;
+}
 /*******Footer******/
 footer{
     background: red;
