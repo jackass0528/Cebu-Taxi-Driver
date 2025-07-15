@@ -1,26 +1,54 @@
-#container-about{
+#container-Content{
   display: grid;
-  height: 100vh;
+  height: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr;
   grid-template-areas:
   "MapTime MapTime MapTime MapTime"
   "SlideShow SlideShow SlideShow SlideShow"
   "header header header header"
-  "about about about about"
+  "Content Content Content Content"
   "footer footer footer footer";
   gap: 0.2rem;
-  margin-top: 80px;
   background: black;
   color: white;
+}
+
+#Content-Head{
+  margin-top: -100px;
+}
+
+
+.Content{
+ grid-area: Content;
+ text-align: center;
+
+}
+
+.Content-Branch{
+  background-color: rgb(58, 63, 63);
+  display: grid;
+ grid-template-columns: 1fr 2fr 1fr;
+ grid-template-rows: 1fr;
+ grid-template-areas: 
+ "Content-Left-Side Content-Center Content-Rigth-Side"
+ ;
+gap: 1em;
+
+}
+
+.Content-Left-Side{
+  align-items: center;
+  grid-area: Content-Left-Side;
+}
+.Content-Rigth-Side{
+  align-items: center;
+  grid-area: Content-Rigth-Side;
  
 }
-
-
-
-.about{
- grid-area: about;
- text-align: center;
-padding-top: 130px;
+.Content-Center{
+  width: auto;
+  grid-area: Content-Center;
+  display: flex;
+  flex-wrap: wrap     ;
 }
-
