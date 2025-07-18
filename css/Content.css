@@ -1,6 +1,6 @@
 #container-Content{
+  height: 100dvh;
   display: grid;
-  height: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows:  0.2fr 0.2fr 0.2fr 1.5fr 1.2fr;
   grid-template-areas:
@@ -10,21 +10,18 @@
   "Content Content Content Content"
   "footer footer footer footer";
   gap: 0.2rem;
-  background: black;
   color: white;
 }
 
-#Content-Head{
-  margin-top: -100px;
-}
-
-
+/******Main******/
 .Content{
  grid-area: Content;
  text-align: center;
+ margin: 40px;
 
 }
 
+/******Center******/
 .Content-Branch{
   background-color: rgb(58, 63, 63);
   display: grid;
@@ -34,21 +31,47 @@
  "Content-Left-Side Content-Center Content-Rigth-Side"
  ;
 gap: 1em;
-
+padding: 20px;
 }
 
-.Content-Left-Side{
-  align-items: center;
-  grid-area: Content-Left-Side;
-}
+/******Right Side******/
 .Content-Rigth-Side{
   align-items: center;
   grid-area: Content-Rigth-Side;
  
 }
 .Content-Center{
-  width: auto;
   grid-area: Content-Center;
-  display: flex;
-  flex-wrap: wrap     ;
+  border-right: 5px rgb(239, 9, 9) solid;
+  border-left: 5px rgb(239, 9, 9) solid;
+}
+
+/******Left Side******/
+
+.Content-Left-Side{
+  align-items: center;
+  grid-area: Content-Left-Side;
+}
+.Content-Left-Img{
+   display: flex;
+ flex-wrap: wrap;
+}
+
+.Content-Left-Img img{
+ display: flex;
+ flex-wrap: wrap;
+ width: 80px;
+ height: auto;
+  background-color: black;
+}
+.Similar-Group-Img li{
+  list-style: none;
+}
+
+.group-img {
+  opacity: 50%;
+}
+
+.group-img :hover{
+  opacity: -50%;
 }
