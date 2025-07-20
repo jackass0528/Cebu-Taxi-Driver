@@ -162,8 +162,8 @@ padding: 20px;
 .Content-Branch{
  grid-template-areas: 
  "Content-Center" 
- "Content-Left-Side"
  "Content-Rigth-Side"
+ "Content-Left-Side"
  ;
 }
 
@@ -177,8 +177,10 @@ padding: 20px;
 }
 
 .Content-Center{
+  position: relative;
   border-right: none;
   border-left: none;
+  background-color: aqua;
 }
 
 
