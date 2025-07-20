@@ -34,16 +34,18 @@ gap: 1em;
 padding: 20px;
 }
 
+
+.Content-Center{
+  grid-area: Content-Center;
+  border-right: 5px rgb(239, 9, 9) solid;
+  border-left: 5px rgb(239, 9, 9) solid;
+}
+
 /******Right Side******/
 .Content-Rigth-Side{
   align-items: center;
   grid-area: Content-Rigth-Side;
  
-}
-.Content-Center{
-  grid-area: Content-Center;
-  border-right: 5px rgb(239, 9, 9) solid;
-  border-left: 5px rgb(239, 9, 9) solid;
 }
 
 /******Left Side******/
@@ -74,4 +76,110 @@ padding: 20px;
 
 .group-img :hover{
   opacity: -50%;
+}
+
+/*****Slider IMage*******/
+.slider-container-content {
+    position: relative;
+    width: 250px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    overflow: hidden; /* Crucial for hiding images outside the view */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left:150px;
+   
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    height: 100%;
+}
+
+.slider-images img {
+
+    min-width: 100%; /* Each image takes up the full width of the container */
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10; /* Ensure buttons are above images */
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333; /* Darker color for active dot */
+}
+
+
+/*****MOBILE RESPONSIVE*****/
+@media (max-width: 470px){
+.Content-Branch{
+ grid-template-areas: 
+ "Content-Center" 
+ "Content-Left-Side"
+ "Content-Rigth-Side"
+ ;
+}
+
+.slider-container-content{
+  margin-left: -10px;
+  width: 350px;
+}
+
+.Content{   
+  margin: 10px;
+}
+
+.Content-Center{
+  border-right: none;
+  border-left: none;
+}
+
+
 }
