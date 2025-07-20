@@ -1,10 +1,12 @@
  :root {
     /**colors**/
---white-color: #f7f2f2;
---secondary-text:#232738;
---dark-color: #b3aaaaf3;
---ligth-color: #ce0707;
---background: rgba(255, 0, 0, 0.986);
+--text-white-color:#fbfbfb ;
+--text-dark-black-color:rgba(0, 0, 0, 0.518);
+--secondary-white-text: #ffffff;
+--dark-black-color: #000000f3;
+--ligth-color-red-bg: rgb(243, 6, 6);
+--ligth-color-yellow-bg: rgba(233, 239, 59, 0.804);
+--link-blue-color: rgb(46, 46, 235);
     
    /**font size**/
 --font-size-s: 0.9rem;
@@ -14,15 +16,16 @@
 
 
 }
-
+/**
 .darkmode{
---text-color:#070b1d ;
---secondary-text: #101425;
---white-color: black;
---dark-color: #b3aaaaf3;
---ligth-color: white;
+--text-color:#fbfbfb ;
+--secondary-text: #ffffff;
+--white-color: rgb(255, 255, 255);
+--dark-color: #000000f3;
+--ligth-color: rgba(242, 14, 14, 0.578);
 
 }
+**/
 
 * {
     box-sizing: border-box;
@@ -58,7 +61,7 @@
 /********* MapTime *********/
 #MapTime{
     display: grid;
-    background: black;
+    background: var(--dark-black-color);
     grid-area: MapTime;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -102,13 +105,9 @@ grid-template-rows: 1fr;
 }
 
 .map a{
-  color: white;
+  color: var(--text-white-color);
   text-decoration: underline;
 
-}
-
-.map{
-    color: rgba(18, 76, 236, 0.938);
 }
 
 
@@ -118,11 +117,11 @@ grid-template-rows: 1fr;
    
 }
 #MapTime .header-contact-phone-number li a{
-    color: white;
+    color: var(--text-color);
 }
 
  #MapTime .header-contact-phone-number li{
-    color: rgba(18, 76, 236, 0.938);
+    color: var(--link-blue-color);
 }
 
 @media (max-width:320px){
@@ -147,13 +146,13 @@ grid-template-rows: 1fr;
 
 
 .map a{
- color: white;
+ color: var(--text-color);
  text-decoration: underline;
 
 }
 
 .map{
-   color: rgba(18, 76, 236, 0.938);
+   color: var(--link-blue-color);
 }
 
 
@@ -163,18 +162,18 @@ grid-template-rows: 1fr;
   
 }
 #MapTime .header-contact-phone-number li a{
-   color: white;
+   color: var(--text-color);
 }
 
 #MapTime .header-contact-phone-number li{
-   color: rgba(18, 76, 236, 0.938);
+   color: var(--link-blue-color);
 }
 
 
 
 /*******SlideShow******/
 #SlideShow{
-    background: black;
+    background: var(--dark-black-color);
     grid-area: SlideShow;
     position: absolute;
     height: 50px;
@@ -185,7 +184,7 @@ grid-template-rows: 1fr;
 
 .moving-text{
     margin-top: 10px;
-    color: white;
+    color: var(--text-white-color);
 }
 
 @media (max-width:1024px){
@@ -229,7 +228,7 @@ grid-template-rows: 1fr;
 /*******header******/
 header{
    grid-area: header;
-   background-color: var(--background);
+   background-color: var(--ligth-color-red-bg);
    text-align: center;
    position: relative;
    width: 100%;
@@ -293,7 +292,7 @@ nav{
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--background);
+    background: var(--ligth-color-red-bg);
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
@@ -311,7 +310,7 @@ nav li{
     margin-left: 1em;
 }
 nav a{
-    color: #070b1d;
+    color: var(--dark-black-color);
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -319,7 +318,7 @@ nav a{
     transition: opacity 150ms ease-in-out;
 }
 nav a:hover {
-    color: white;
+    color: var(--secondary-white-text);
 }
 
 .nav-toggle:checked ~ nav{
@@ -347,7 +346,7 @@ nav a:hover {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
 display: block;
-background: white;
+background: var(--secondary-white-text);
 height: 2px;
 width: 2em;
 border-radius: 2px;
@@ -404,7 +403,7 @@ margin-bottom: 0;
         content: '';
         display: block;
         height: 5px;
-        background: black;
+        background: var(--dark-black-color);
         position: absolute;
         bottom: -.75em;
         left: 0;
@@ -422,10 +421,10 @@ margin-bottom: 0;
 
     /*******Main******/
 main{
-    background: black;
+    background: var(--dark-black-color);
     grid-area: main;
     margin-top: -2px;
-    color: white;
+    color: var(--text-white-color);
     text-align: center;
     padding: 20px; 
 }
@@ -446,7 +445,7 @@ main{
     display: inline;
     margin: 5px;
     width: 200px;
-    background-color: #f3f5f3;
+    background-color: var(--secondary-white-text);
     color: #070b1d;
     padding: 10px;
     
@@ -476,24 +475,24 @@ main{
 .box1{
     width: 100px;
     height: 100px;
-    background: red;
+    background: var(--ligth-color-red-bg);
     
  
 }
 .box2{
     width: 100px;
     height: 100px;
-    background: red;
+    background: var(--ligth-color-red-bg);
 }
 .box3{
     width: 100px;
     height: 100px;
-    background: red;
+    background: var(--ligth-color-red-bg);
 }
 .box4{
     width: 100px;
     height: 100px;
-    background: red;
+    background: var(--ligth-color-red-bg);
 }
 
 /*******SideBar******/
@@ -538,15 +537,15 @@ main{
 
 .SideContent1{
     grid-area: SideContent1;
-    background: red;
+    background: var(--ligth-color-red-bg);
     margin-bottom: 5px;
     margin-top: 78px;
    
 }
 .SideContent2{
     grid-area: SideContent2;
-    background: black;
-    color: white;
+    background: var(--dark-black-color);
+    color: var(--text-white-color);
     padding-top: 30px;
 }
 
@@ -582,7 +581,7 @@ font-size: x-small;
 
 /*******title-1******/
 #title-1{
-    background: yellow;
+    background: var(--ligth-color-yellow-bg);
     grid-area: title-1;
     color: black;
     text-align: center;
@@ -594,9 +593,9 @@ font-size: x-small;
 
 /*******title-2******/
 #title-2{
-    background: yellow;
+    background: var(--ligth-color-yellow-bg);
     grid-area: title-2;
-    color: black;
+    color: var(--text-dark-black-color);
     text-align: center;
     height: 100px;
     padding: 30px;
@@ -606,9 +605,9 @@ font-size: x-small;
 
 /*******Content1******/
 #Content1{
-    background: black;
+    background: var(--dark-black-color);
     grid-area: Content1;
-    color: white;
+    color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -626,9 +625,9 @@ font-size: x-small;
 
 /*******Content2******/
 #Content2{
-    background: red;
+    background: var(--ligth-color-red-bg);
     grid-area: Content2;
-    color: white;
+    color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -646,9 +645,9 @@ font-size: x-small;
 
 /*******Content3******/
 #Content3{
-     background: black;
+     background: var(--dark-black-color);
      grid-area: Content3;
-     color: white;
+     color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
@@ -663,9 +662,9 @@ font-size: x-small;
 }
 /*******Content4******/
 #Content4{
-    background: red;
+    background: var(--ligth-color-red-bg);
     grid-area: Content4;
-    color: white;
+    color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -679,9 +678,9 @@ font-size: x-small;
 }
 /*******Content5******/
 #Content5{
-    background: black;
+    background: var(--dark-black-color);
     grid-area: Content5;
-    color: white;
+    color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -698,9 +697,9 @@ font-size: x-small;
 
 /*******Content6******/
 #Content6{
-     background: red;
+     background: var(--ligth-color-red-bg);
      grid-area: Content6;
-     color: white;
+     color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
@@ -716,9 +715,9 @@ font-size: x-small;
 
 /*******Content7******/
 #Content7{
-     background: red;
+     background: var(--ligth-color-red-bg);
      grid-area: Content7;
-     color: white;
+     color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
@@ -734,9 +733,9 @@ font-size: x-small;
 
 /*******Content8******/
 #Content8{
-     background: red;
+     background: var(--ligth-color-red-bg);
      grid-area: Content8;
-     color: white;
+     color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
@@ -752,9 +751,9 @@ font-size: x-small;
 
 /*******Content9******/
 #Content9{
-     background: red;
+     background: var(--ligth-color-red-bg);
      grid-area: Content9;
-     color: white;
+     color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
@@ -770,15 +769,15 @@ font-size: x-small;
 
 /*******Content box for all******/
 .content-box{
-    background-color: #f3f5f3;
-    color: #070b1d;
+    background-color: var(--secondary-white-text);
+    color: var(--text-dark-black-color);
     margin-bottom: 20px;
     margin: 20px;
 }
 
 .content-prices{
   
-    color: #000000;
+    color: var(--text-dark-black-color);
     padding: 20px;
     font-size: 20px;
     text-align: start;
@@ -786,12 +785,12 @@ font-size: x-small;
 
 .book-btn{
 margin-top: 10px;
-background-color: #ce0707;
+background-color: var(--ligth-color-red-bg);
 padding: 10px;
 }
 /*******Footer******/
 footer{
-    background: red;
+    background: var(--ligth-color-red-bg);
     grid-area: footer;
     height: 80px;
     width: 100%;
@@ -802,7 +801,7 @@ footer{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    background: #070b1d;
+    background: var(--dark-black-color);
     margin: 10px;
     
 }
@@ -830,7 +829,7 @@ footer{
     }
 }
 .SocialMeadia{
-    background: #1565c0;
+    background: var(--link-blue-color);
     margin: 10px;
 
 }
