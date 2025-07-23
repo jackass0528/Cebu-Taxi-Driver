@@ -34,13 +34,46 @@ gap: 1em;
 padding: 20px;
 }
 
-
 .Content-Center{
   grid-area: Content-Center;
   border-right: 5px rgb(239, 9, 9) solid;
   border-left: 5px rgb(239, 9, 9) solid;
 }
 
+.center-sample-itinerary-sked{
+  text-align: start;
+  margin-left: 30px;
+}
+.center-sample-itinerary-sked li{
+  font-weight: 600;
+}
+
+.center-map-itinirary h2{
+  text-align: start;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.center-destination-itinerary{
+  text-align: start;
+  margin-left: 30px;
+}
+
+.center-destination-itinerary li{
+  font-size: large;
+  font-weight: 600;
+}
+
+#Note{
+  font-size: x-large;
+  font-weight: 600;
+}
+
+@media (max-width: 470px){
+  .center-map-itinirary iframe {
+    width: 350px;
+  }
+}
 /******Right Side******/
 .Content-Rigth-Side{
   align-items: center;
