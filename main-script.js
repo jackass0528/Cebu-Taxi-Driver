@@ -123,3 +123,21 @@ window.scrollTo(0, 0);
             // Initialize
             initSlider();
         });
+
+
+
+        
+        //Clear-Site-Data: cache
+
+            const express = require('express');
+    const app = express();
+
+    app.get('/logout', (req, res) => {
+        // ... perform logout operations ...
+        res.setHeader('Clear-Site-Data', '"cache"');
+        res.send('You have been logged out and cache cleared.');
+    });
+
+    app.listen(3000, () => {
+        console.log('Server listening on port 3000');
+    });

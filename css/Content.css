@@ -113,11 +113,11 @@ padding: 20px;
 /*****Slider IMage*******/
 .slider-container-content {
     position: relative;
-    width: 250px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+    width: 450px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
     overflow: hidden; /* Crucial for hiding images outside the view */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(127, 8, 8, 0.1);
     margin-left:150px;
    
 }
@@ -126,10 +126,11 @@ padding: 20px;
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
     height: 100%;
+  
+   
 }
 
 .slider-images img {
-
     min-width: 100%; /* Each image takes up the full width of the container */
     height: 100%;
     object-fit: cover; /* Ensures images cover the area without distortion */
