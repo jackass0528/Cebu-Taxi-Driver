@@ -1,12 +1,12 @@
  :root {
     /**colors**/
 --text-white-color:#fbfbfb ;
---text-dark-black-color:rgba(0, 0, 0, 0.518);
+--text-dark-black-color:#0A0A0A;
 --secondary-white-text: #ffffff;
 --dark-black-color: #000000f3;
---ligth-color-red-bg: rgb(243, 6, 6);
---ligth-color-yellow-bg: rgba(233, 239, 59, 0.804);
---link-blue-color: rgb(46, 46, 235);
+--ligth-color-red-bg: #F50021;
+--ligth-color-yellow-bg: #D9D92B;
+--link-blue-color: #1848CE;
     
    /**font size**/
 --font-size-s: 0.9rem;
