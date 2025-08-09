@@ -1,3 +1,23 @@
+ :root {
+    /**colors**/
+--text-white-color:#fbfbfb ;
+--text-dark-black-color:#0A0A0A;
+--secondary-white-text: #ffffff;
+--dark-black-color: #000000f3;
+--ligth-color-red-bg: #F50021;
+--ligth-color-yellow-bg: #D9D92B;
+--link-blue-color: #1848CE;
+--ligth-gray-bg: #58585F;
+    
+   /**font size**/
+--font-size-s: 0.9rem;
+--font-size-n: 1rem;
+--font-size-m: 1.12rem;
+--font-size-l: 1.5rem;
+
+
+}
+
 #container-Content{
   height: 100dvh;
   display: grid;
@@ -23,7 +43,7 @@
 
 /******Center******/
 .Content-Branch{
-  background-color: rgb(58, 63, 63);
+  background-color: var(--dark-black-color);
   display: grid;
  grid-template-columns: 1fr 2fr 1fr;
  grid-template-rows: 1fr;
@@ -36,8 +56,8 @@ padding: 20px;
 
 .Content-Center{
   grid-area: Content-Center;
-  border-right: 5px rgb(239, 9, 9) solid;
-  border-left: 5px rgb(239, 9, 9) solid;
+  border-right: 5px var(--ligth-color-red-bg) solid;
+  border-left:  5px var(--ligth-color-red-bg) solid;;
 }
 
 .center-sample-itinerary-sked{
@@ -96,7 +116,7 @@ padding: 20px;
  flex-wrap: wrap;
  width: 80px;
  height: auto;
-  background-color: black;
+ background-color: var(--dark-black-color);
 }
 .Similar-Group-Img li{
   list-style: none;
@@ -142,8 +162,8 @@ padding: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: var(--dark-black-color);
+    color: var(--text-white-color);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -156,7 +176,7 @@ padding: 20px;
 
 .prev-button:hover,
 .next-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--dark-black-color);
 }
 
 .prev-button {
@@ -179,7 +199,7 @@ padding: 20px;
 .dot {
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--ligth-gray-bg);
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
