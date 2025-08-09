@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Slider Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+  slider-seek .label {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.slider-seek svg {
+  forced-color-adjust: auto;
+}
+
+.slider-seek text {
+  font-weight: bold;
+  fill: currentcolor;
+  font-family: sans-serif;
+}
+
+.slider-seek {
+  margin-top: 1em;
+  padding: 6px;
+  color: black;
+}
+
+.slider-slider .value {
+  position: relative;
+  top: 20px;
+  height: 1.5em;
+  font-size: 80%;
+}
+
+.slider-seek .temp-value {
+  padding-left: 24px;
+  font-size: 200%;
+}
+
+.slider-seek .rail {
+  stroke: currentcolor;
+  stroke-width: 2px;
+  fill: currentcolor;
+  fill-opacity: 0.25;
+}
+
+.slider-seek .thumb {
+  stroke-width: 0;
+  fill: currentcolor;
+}
+
+.slider-seek .focus-ring {
+  stroke: currentcolor;
+  stroke-opacity: 0;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  display: none;
+}
+
+.slider-seek .slider-group {
+  touch-action: pan-y;
+}
+
+.slider-seek .slider-group .value {
+  display: none;
+}
+
+/* Focus and hover styling */
+
+.slider-seek.focus [role="slider"] {
+  color: #005a9c;
+}
+
+.slider-seek [role="slider"]:focus {
+  outline: none;
+}
+
+.slider-seek [role="slider"]:focus .focus-ring {
+  display: block;
+  stroke-opacity: 1;
+}
+
+.slider-seek [role="slider"]:focus .value {
+  display: block;
+}
+
+ /*stand alone page styles*/
+ table td, table th {
+        border: 1px solid black;
+        padding: 3px;
+    }
+    table {     border-collapse: collapse;  margin: 20px;}
+    th {
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: -internal-center;
+        unicode-bidi: isolate;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Slider Example</h1>
+    </header>
+    <main>
+        <table class="data">
+            <tr>
+                <th width="150px" >Attribute/Option</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>sliderColor</td>
+                <td>This attribute/option specifies color for the main slider / ruler.
+                    If this option is not specified, a default color is used.
+                </td>
+                </tr>
+            <tr>
+                <td>markerColor</td>
+                <td>This attribute/option specifies color for the marker.
+                    If this option is not specified, a default color is used.
+                </td>
+            </tr>
+            
+            <tr>
+                <td>getTextValue</td>
+                <td>This option specifies a function that will convert a value into required text that could be more meaningful for scale markers. 
+                    If this option is not specified, value will be displayed in integer form.                    
+                </td>
+            </tr>
+            <tr>
+                <td>getTextValueDesc</td>
+                <td>This option specifies a function that will convert a value into required text description that could be more meaningful for screen readers. 
+                    If this option is not specified, value will be displayed in integer form.                    
+                </td>
+            </tr>
+            <tr>
+                <td>noOfScales</td>
+                <td>This option specifies number of markings/scales to be displayed on the slider. By default, it will have 6 markings.
+                </td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>This attribute/option specifies the width of the slider widget.
+                    If this attribute/ option is not specified, width will be set with a default value.    
+                </td>
+            </tr>    
+        </table>
+
+        <div id="id-seek-label" ><h2>Media Seek</h2></div>
+        <div >
+            <h3>Native HTML Implementation</h3>
+            <div style="padding-left: 30px;">
+                <input class="deque-slider-widget" type="range" min="0" max="300" value="90" step="1" id="seek-input" aria-labelledby="id-seek-label" aria-valuetext="1 minute 30 seconds" orientation="vertical" style="width: 300px;">
+                <div style="margin-left: 3px;"><label>Value: </label><span id="current-value" >1:30</span></div>
+            </div>
+            <br/>
+            
+        </div>
+        <div >
+            <h3>ARIA Implementation</h3>
+              <div class="slider-seek"></div>
+        </div>          
+    </main>
+     
+
+    <script>
+//This component has been adapted from an example provided by the W3C, in accordance with the W3C Software and Document License https://www.w3.org/copyright/software-license-2023/
+
+class Slider {
+  constructor(domNode, min, max, current, options ) {
+    this.domNode = domNode;
+    this.minValue = min;
+    this.maxValue = max;
+    this.currentValue = current;
+    
+    this.isMoving = false;
+
+    if ( typeof options != "object" ) options = {};
+    this.sliderColor = "";
+    if(typeof options["sliderColor"] === "string")
+    {
+        this.domNode.style.color = options["sliderColor"];
+        this.sliderColor = options["sliderColor"];
+    }
+    this.markerColor = "";
+    if(typeof options["markerColor"] === "string")
+        this.markerColor = options["markerColor"];
+    this.getTextValue = null;
+    if(typeof options["getTextValue"] === "function")
+        this.getTextValue = options["getTextValue"];
+    this.getTextValueDesc = null;
+    if(typeof options["getTextValueDesc"] === "function")
+        this.getTextValueDesc = options["getTextValueDesc"];
+    
+    this.width = 300;
+    if( (typeof options["width"] === "string") || (typeof options["width"] === "number") )
+        this.width = options["width"];
+    this.noOfScales = 5;
+    if(typeof options["noOfScales"] === "number")
+        this.noOfScales = options["noOfScales"];
+    
+    
+
+    this.domNode.innerHTML = this.getHTMLSetup();
+    this.svgNode = domNode.querySelector('svg');
+    this.svgPoint = this.svgNode.createSVGPoint();
+
+    this.railNode = domNode.querySelector('.rail');
+    this.sliderNode = domNode.querySelector('[role=slider]');
+    this.sliderValueNode = this.sliderNode.querySelector('.value');
+    this.sliderFocusNode = this.sliderNode.querySelector('.focus-ring');
+    this.sliderThumbNode = this.sliderNode.querySelector('.thumb');
+
+    this.valueLabelNodes = domNode.querySelectorAll('.value-label');
+
+    // Dimensions of the slider focus ring, thumb and rail
+
+    this.railHeight = parseInt(this.railNode.getAttribute('height'));
+    this.railWidth = parseInt(this.railNode.getAttribute('width'));
+    this.railY = parseInt(this.railNode.getAttribute('y'));
+    this.railX = parseInt(this.railNode.getAttribute('x'));
+
+    this.thumbWidth = parseInt(this.sliderThumbNode.getAttribute('width'));
+    this.thumbHeight = parseInt(this.sliderThumbNode.getAttribute('height'));
+
+    this.focusHeight = parseInt(this.sliderFocusNode.getAttribute('height'));
+    this.focusWidth = parseInt(this.sliderFocusNode.getAttribute('width'));
+
+    this.thumbY = this.railY + this.railHeight / 2 - this.thumbHeight / 2;
+    this.sliderThumbNode.setAttribute('y', this.thumbY);
+
+    this.focusY = this.railY + this.railHeight / 2 - this.focusHeight / 2;
+    this.sliderFocusNode.setAttribute('y', this.focusY);
+
+    this.railNode.setAttribute('y', this.railY);
+    this.railNode.setAttribute('x', this.railX);
+    this.railNode.setAttribute('height', this.railHeight);
+    //this.railNode.setAttribute('width', this.railWidth);
+
+    // define possible slider positions
+
+    this.svgNode.addEventListener('click', this.onRailClick.bind(this));
+    this.sliderNode.addEventListener(
+      'keydown',
+      this.onSliderKeydown.bind(this)
+    );
+
+    this.sliderNode.addEventListener(
+      'pointerdown',
+      this.onSliderPointerDown.bind(this)
+    );
+
+    // bind a pointermove event handler to move pointer
+    this.svgNode.addEventListener('pointermove', this.onPointerMove.bind(this));
+
+    // bind a pointerup event handler to stop tracking pointer movements
+    document.addEventListener('pointerup', this.onPointerUp.bind(this));
+
+    this.sliderNode.addEventListener('focus', this.onSliderFocus.bind(this));
+    this.sliderNode.addEventListener('blur', this.onSliderBlur.bind(this));
+
+    let deltaPosition = this.railWidth / (this.valueLabelNodes.length - 1);
+
+    let position = this.railX;
+
+    this.positions = [];
+    this.textValues = [];
+
+    let maxTextWidth = this.getWidthFromLabelText();
+    let textHeight = this.getHeightFromLabelText();
+
+    for (let i = 0; i < this.valueLabelNodes.length; i++) {
+      let valueLabelNode = this.valueLabelNodes[i];
+
+      let textNode = valueLabelNode.querySelector('text');
+
+      let w = maxTextWidth + 2;
+      let x = position - w / 2;
+      let y = this.thumbY + this.thumbHeight;
+
+      x = x + (maxTextWidth - textNode.getBoundingClientRect().width) / 2;
+      if( x < 0 ) x = 0;
+      y = y + textHeight;
+
+      textNode.setAttribute('x', x);
+      textNode.setAttribute('y', y);
+
+      this.textValues.push(valueLabelNode.getAttribute('data-value'));
+
+      this.positions.push(position);
+      position += deltaPosition;
+    }
+
+    // temporarily show slider value to allow width calc onload
+    this.sliderValueNode.setAttribute('style', 'display: block');
+    this.moveSliderTo(this.getValue());
+    this.sliderValueNode.removeAttribute('style');
+
+    // Include total time in aria-valuetext when loaded
+    this.sliderNode.setAttribute(
+      'aria-valuetext',
+      ( this.getTextValueDesc? this.getTextValueDesc(this.getValue()): this.getValue() )
+    );
+  }
+
+  getHTMLSetup()
+  {
+    var margin = 50;
+    var width = parseInt(this.width);
+    var noOfScales = this.noOfScales;
+    var increment = (this.maxValue - this.minValue)/noOfScales;
+
+   var html = `<svg role="none" class="slider-group" width="`+( width+margin)+`" height="120">
+    <rect class="rail" x="25" y="50" width="`+ ( width) +`" height="8" rx="5" aria-hidden="true"></rect>
+    <g id="id-seek" role="slider" tabindex="0" aria-valuemin="`+this.minValue+`" 
+    aria-valuenow="`+this.currentValue+`" aria-valuetext="1 minute 30 seconds" aria-valuemax="`+this.maxValue+`" aria-labelledby="id-seek-label">
+    <text class="value" x="0" y="15">1:30</text>
+    <rect class="focus-ring" x="0" y="0" width="28" height="60" rx="12"></rect>
+    <rect class="thumb" x="0" y="0" width="14" height="48" rx="5"></rect>
+    </g>`;
+        
+    for(var i = this.minValue; i <= this.maxValue; i=i+ increment)
+    {
+        var textVal = i;
+        if(this.getTextValue) textVal = this.getTextValue(i);
+        html += '<g class="value-label" data-value="'+ i +'"><text x="0" y="0">'+ textVal +'</text> </g>';
+    }        
+    return html;          
+  }
+
+  getWidthFromLabelText() {
+    let width = 0;
+    for (let i = 0; i < this.valueLabelNodes.length; i++) {
+      let textNode = this.valueLabelNodes[i].querySelector('text');
+      if (textNode) {
+        width = Math.max(width, textNode.getBoundingClientRect().width);
+      }
+    }
+    return width;
+  }
+
+  getHeightFromLabelText() {
+    let height = 0;
+    let textNode = this.valueLabelNodes[0].querySelector('text');
+    if (textNode) {
+      height = textNode.getBoundingClientRect().height;
+    }
+    return height;
+  }
+
+  // Get point in global SVG space
+  getSVGPoint(event) {
+    this.svgPoint.x = event.clientX;
+    this.svgPoint.y = event.clientY;
+    return this.svgPoint.matrixTransform(this.svgNode.getScreenCTM().inverse());
+  }
+
+  getValue() {
+    return parseInt(this.sliderNode.getAttribute('aria-valuenow'));
+  }
+
+  getValueMin() {
+    return parseInt(this.sliderNode.getAttribute('aria-valuemin'));
+  }
+
+  getValueMax() {
+    return parseInt(this.sliderNode.getAttribute('aria-valuemax'));
+  }
+
+  isInRange(value) {
+    let valueMin = this.getValueMin();
+    let valueMax = this.getValueMax();
+    return value <= valueMax && value >= valueMin;
+  }
+
+
+  moveSliderTo(value) {
+    let valueMax, valueMin, pos, width;
+
+    valueMin = this.getValueMin();
+    valueMax = this.getValueMax();
+
+    value = Math.min(Math.max(value, valueMin), valueMax);
+
+    this.sliderNode.setAttribute('aria-valuenow', value);
+
+    this.sliderValueNode.textContent = ( this.getTextValue? this.getTextValue(value): value );
+
+    width = this.sliderValueNode.getBoundingClientRect().width;
+
+    this.sliderNode.setAttribute(
+      'aria-valuetext',
+      ( this.getTextValueDesc? this.getTextValueDesc(this.getValue()): this.getValue() )
+    );
+
+    pos =
+      this.railX +
+      Math.round(((value - valueMin) * this.railWidth) / (valueMax - valueMin));
+
+    // move the SVG focus ring and thumb elements
+    this.sliderFocusNode.setAttribute('x', pos - this.focusWidth / 2);
+    this.sliderThumbNode.setAttribute('x', pos - this.thumbWidth / 2);
+    this.sliderValueNode.setAttribute('x', pos - width / 2);
+  }
+
+  onSliderKeydown(event) {
+    var flag = false;
+    var value = this.getValue();
+    var valueMin = this.getValueMin();
+    var valueMax = this.getValueMax();
+
+    switch (event.key) {
+      case 'ArrowLeft':
+      case 'ArrowDown':
+        this.moveSliderTo(value - 1);
+        flag = true;
+        break;
+
+      case 'ArrowRight':
+      case 'ArrowUp':
+        this.moveSliderTo(value + 1);
+        flag = true;
+        break;
+
+      case 'PageDown':
+        this.moveSliderTo(value - 15);
+        flag = true;
+        break;
+
+      case 'PageUp':
+        this.moveSliderTo(value + 15);
+        flag = true;
+        break;
+
+      case 'Home':
+        this.moveSliderTo(valueMin);
+        flag = true;
+        break;
+
+      case 'End':
+        this.moveSliderTo(valueMax);
+        flag = true;
+        break;
+
+      default:
+        break;
+    }
+
+    if (flag) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
+
+  onSliderFocus() {
+    this.domNode.classList.add('focus');
+    if(this.markerColor != "")
+    {
+        this.domNode.querySelector(".value").style.color = this.markerColor;
+        this.domNode.querySelector(".thumb").style.color = this.markerColor;
+        this.domNode.querySelector(".focus-ring").style.color = this.markerColor;
+    }
+    
+  }
+
+  onSliderBlur() {
+    this.domNode.classList.remove('focus');
+    // Include total time in aria-valuetext
+    this.sliderNode.setAttribute(
+      'aria-valuetext',
+      ( this.getTextValueDesc? this.getTextValueDesc(this.getValue()): this.getValue() )
+    );
+    if(this.markerColor != "")
+    {
+        this.domNode.querySelector(".value").style.color = "";
+        this.domNode.querySelector(".thumb").style.color = "";
+        this.domNode.querySelector(".focus-ring").style.color = "";
+    }
+    
+  }
+
+  onRailClick(event) {
+    var x = this.getSVGPoint(event).x;
+    var min = this.getValueMin();
+    var max = this.getValueMax();
+    var diffX = x - this.railX;
+    var value = Math.round((diffX * (max - min)) / this.railWidth);
+    this.moveSliderTo(value);
+
+    event.preventDefault();
+    event.stopPropagation();
+    // Set focus to the clicked handle
+    this.sliderNode.focus();
+  }
+
+  onSliderPointerDown(event) {
+    this.isMoving = true;
+    event.preventDefault();
+    event.stopPropagation();
+    // Set focus to the clicked handle
+    this.sliderNode.focus();
+  }
+
+  onPointerMove(event) {
+    if (this.isMoving) {
+      var x = this.getSVGPoint(event).x;
+      var min = this.getValueMin();
+      var max = this.getValueMax();
+      var diffX = x - this.railX;
+      var value = Math.round((diffX * (max - min)) / this.railWidth);
+      this.moveSliderTo(min + value);
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
+
+  onPointerUp() {
+    this.isMoving = false;
+  }
+}
+
+window.addEventListener('load', function () {
+  let slider = document.querySelector('.slider-seek');
+  var options = {};
+  options.sliderColor = "#990c0c";
+  options.markerColor = "#225f5f";
+  options["getTextValue"] = getMinutesSeconds;
+  options["getTextValueDesc"] = getMinutesSecondsText;
+
+  options.noOfScales = 5;
+  options.width = "300";
+  new Slider(slider,0,300,90, options);
+  document.getElementById("seek-input").addEventListener("change", htmlSliderChanged);
+  document.getElementById("seek-input").addEventListener("mousemove", htmlSliderChanged);
+  
+});
+
+function getMinutesSecondsText(value)
+{
+    var minutes =  Math.floor( value / 60);
+    var seconds =  ( value % 60);
+    var valueText = "";
+    if(minutes == 1 ) valueText += minutes + " minute ";
+    if(minutes > 1 ) valueText += minutes + " minutes ";
+    if(seconds == 1 ) valueText += seconds + " second ";
+    if(seconds > 1 ) valueText += seconds + " seconds ";
+    return valueText;
+}
+
+function getMinutesSeconds(value)
+{
+    var minutes =  Math.floor( value / 60);
+    var seconds =  ( value % 60);
+    if( seconds < 10 ) seconds = "0"+seconds;
+    return minutes +":"+ seconds;
+}
+
+
+function htmlSliderChanged(event)
+{
+    var slider = event.target;
+    var minutes =  Math.floor( slider.value / 60);
+    var seconds =  ( slider.value % 60);
+    var valueText = getMinutesSecondsText(slider.value);
+    if( seconds < 10 ) seconds = "0"+seconds;
+    document.getElementById("current-value").innerHTML = minutes +":"+ seconds;
+    document.getElementById("seek-input").setAttribute("aria-valuetext", valueText);
+}
+      
+</script>
+</body>
+
+</html>
+                
+            
