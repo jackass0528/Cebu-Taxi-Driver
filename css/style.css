@@ -7,6 +7,7 @@
 --ligth-color-red-bg: #F50021;
 --ligth-color-yellow-bg: #D9D92B;
 --link-blue-color: #1848CE;
+--ligth-gray-bg: #58585F;
     
    /**font size**/
 --font-size-s: 0.9rem;
@@ -578,6 +579,25 @@ font-size: x-small;
     }
 }
 
+/*********Sidbar-details***********/
+details {
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  background-color: var(--ligth-gray-bg);
+  padding: 0.5em;
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+}
 
 /*******title-1******/
 #title-1{
