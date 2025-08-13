@@ -141,3 +141,39 @@ window.scrollTo(0, 0);
     app.listen(3000, () => {
         console.log('Server listening on port 3000');
     });
+
+
+     document.addEventListener('DOMContentLoaded', () => {
+    const travelForm = document.getElementById('travelForm');
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    travelForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Stop the form from submitting normally
+
+        // Get values from the form
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const destination = document.getElementById('destination').value;
+        const startDate = document.getElementById('start-date').value;
+        const endDate = document.getElementById('end-date').value;
+
+        // Simple validation logic
+        if (new Date(endDate) < new Date(startDate)) {
+            alert('Return date cannot be before the departure date.');
+            return; // Stop the function if validation fails
+        }
+        
+        // Display a confirmation message
+        confirmationMessage.innerHTML = `
+            <h3>Booking Confirmed! ✅</h3>
+            <p>Thank you, **${name}**! Your trip to **${destination}** from **${startDate}** to **${endDate}** has been booked.</p>
+            <p>A confirmation email has been sent to **${email}**.</p>
+        `;
+        confirmationMessage.classList.remove('hidden');
+
+        // Optional: Reset the form after a short delay
+        setTimeout(() => {
+            travelForm.reset();
+        }, 5000);
+    });
+});
