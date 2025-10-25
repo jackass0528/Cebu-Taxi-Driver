@@ -512,6 +512,11 @@ main{
     
 }
 
+.List-prices{
+    text-align: center;
+    margin-left: 10px;
+}
+
 @media(max-width:650px){
     #Sidebar{
      margin-top: -124px;
