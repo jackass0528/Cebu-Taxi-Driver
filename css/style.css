@@ -800,6 +800,9 @@ details[open] summary {
     margin: 20px;
   border-radius: 10px;
 }
+.image-item{
+    padding: 10px;
+}
 
 .image-item img{
 border-radius: 10px;
@@ -810,16 +813,14 @@ border-radius: 10px;
     text-align: center;
     background-color: var(--ligth-gray-bg);
     border-radius: 10px;
-    margin: 5px;
-    margin-top: -20px;
-   
-     
+    margin: 45px;
+    margin-top: -40px;
+    position: relative;
   
 }
 
 .content-prices{
     color: var(--text-dark-black-color);
-    padding: 20px;
     font-size: 20px;
     text-align: center;
 }
