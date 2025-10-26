@@ -446,7 +446,7 @@ main{
     display: inline;
     margin: 5px;
     width: 200px;
-    background-color: var(--secondary-white-text);
+    background-color: var(--ligth-color-red-bg);
     color: #070b1d;
     padding: 10px;
     
@@ -543,7 +543,7 @@ main{
 
 .SideContent1{
     grid-area: SideContent1;
-    border: 1px solid var(--ligth-gray-bg);
+   
     margin-bottom: 5px;
     margin-top: 78px;
     padding-bottom: 20px;
@@ -551,7 +551,7 @@ main{
 }
 .SideContent2{
     grid-area: SideContent2;
-   border: 1px solid var(--ligth-gray-bg);
+ 
     color: var(--text-dark-black-color);
     padding-top: 30px;
 }
@@ -612,8 +612,8 @@ details[open] summary {
     color: black;
     text-align: start;
     height: 100px;
-    padding: 30px;
     margin-bottom: 20px;
+    margin: 20px;
 
 
 }
@@ -625,12 +625,12 @@ details[open] summary {
 
 /*******title-2******/
 #title-2{
-    background: var(--ligth-color-yellow-bg);
+    background: var(--secondary-white-text);
     grid-area: title-2;
     color: var(--text-dark-black-color);
     text-align: center;
     height: 100px;
-    padding: 30px;
+    margin-bottom: 20px;
 
 }
 
@@ -659,6 +659,7 @@ details[open] summary {
 /*******Content2******/
 #Content2{
     border: 1px solid var(--ligth-gray-bg);
+     border-radius: 10px;
     grid-area: Content2;
     color: var(--text-white-color);
     justify-content: center;
@@ -679,6 +680,7 @@ details[open] summary {
 /*******Content3******/
 #Content3{
      border: 1px solid var(--ligth-gray-bg);
+     border-radius: 10px;
      grid-area: Content3;
      color: var(--text-white-color);
      justify-content: center;
@@ -686,6 +688,7 @@ details[open] summary {
      flex-wrap: wrap;
     text-align: center;
     padding-top: 30px;
+    
 }
 
 .Content3-container{
@@ -696,6 +699,7 @@ details[open] summary {
 /*******Content4******/
 #Content4{
     border: 1px solid var(--ligth-gray-bg);
+     border-radius: 10px;
     grid-area: Content4;
     color: var(--text-white-color);
     justify-content: center;
@@ -1331,7 +1335,9 @@ text-decoration: none;
               }
         }
   
-
+.intro-text{
+    color: var(--dark-black-color);
+}
 
    
     
