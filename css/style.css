@@ -787,7 +787,7 @@ details[open] summary {
     padding-top: 30px;
 }
 
-.Content7   -container{
+.Content7 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -795,18 +795,33 @@ details[open] summary {
 
 /*******Content box for all******/
 .content-box{
-    background-color: var(--secondary-white-text);
     color: var(--text-dark-black-color);
     margin-bottom: 20px;
     margin: 20px;
+  border-radius: 10px;
+}
+
+.image-item img{
+border-radius: 10px;
+}
+.content-title{
+    color: var(--text-white-color);
+    padding: 20px;
+    text-align: center;
+    background-color: var(--ligth-gray-bg);
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: -20px;
+   
+     
+  
 }
 
 .content-prices{
-  
     color: var(--text-dark-black-color);
     padding: 20px;
     font-size: 20px;
-    text-align: start;
+    text-align: center;
 }
 
 .book-btn{
