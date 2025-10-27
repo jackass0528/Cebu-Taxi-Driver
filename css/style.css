@@ -638,14 +638,15 @@ details[open] summary {
 /*******Content1******/
 #Content1{
     border: 1px solid var(--ligth-gray-bg);
-    border-radius: 10px;
+    border-radius: 50px;
     grid-area: Content1;
     color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .Content1-container{
@@ -659,14 +660,15 @@ details[open] summary {
 /*******Content2******/
 #Content2{
     border: 1px solid var(--ligth-gray-bg);
-     border-radius: 10px;
+     border-radius: 50px;
     grid-area: Content2;
     color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .Content2-container{
@@ -680,14 +682,15 @@ details[open] summary {
 /*******Content3******/
 #Content3{
      border: 1px solid var(--ligth-gray-bg);
-     border-radius: 10px;
+     border-radius: 50px;
      grid-area: Content3;
      color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
     
 }
 
@@ -699,14 +702,15 @@ details[open] summary {
 /*******Content4******/
 #Content4{
     border: 1px solid var(--ligth-gray-bg);
-     border-radius: 10px;
+    border-radius: 50px;
     grid-area: Content4;
     color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
    text-align: center;
-   padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
 }
 .Content4-container{
     display: flex;
@@ -716,13 +720,15 @@ details[open] summary {
 /*******Content5******/
 #Content5{
    border: 1px solid var(--ligth-gray-bg);
+    border-radius: 50px;
     grid-area: Content5;
     color: var(--text-white-color);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
    text-align: center;
-   padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
     
 }
 
@@ -735,13 +741,15 @@ details[open] summary {
 /*******Content6******/
 #Content6{
     border: 1px solid var(--ligth-gray-bg);
+     border-radius: 50px;
      grid-area: Content6;
      color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .Content6-container{
@@ -753,13 +761,15 @@ details[open] summary {
 /*******Content7******/
 #Content7{
     border: 1px solid var(--ligth-gray-bg);
+     border-radius: 50px;
      grid-area: Content7;
      color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .Content7   -container{
@@ -771,13 +781,15 @@ details[open] summary {
 /*******Content8******/
 #Content8{
     border: 1px solid var(--ligth-gray-bg);
+     border-radius: 50px;
      grid-area: Content8;
      color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .Content7   -container{
@@ -789,13 +801,15 @@ details[open] summary {
 /*******Content9******/
 #Content9{
      border: 1px solid var(--ligth-gray-bg);
+      border-radius: 50px;
      grid-area: Content9;
      color: var(--text-white-color);
      justify-content: center;
      display: flex;
      flex-wrap: wrap;
     text-align: center;
-    padding-top: 30px;
+   padding: 5px;
+    margin: 10px;
 }
 
 .Content7 .container{
@@ -1169,7 +1183,11 @@ footer{
 .dropdown-content a{
 background-color: #9ea0a3;
 text-decoration: none;
+color: var(--text-dark-black-color);
 
+}
+.dropdown-content p{
+    color: var(--text-dark-black-color);
 
 }
 
