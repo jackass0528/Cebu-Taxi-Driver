@@ -613,7 +613,7 @@ details[open] summary {
     text-align: start;
     height: 100px;
     margin-bottom: 20px;
-    margin: 20px;
+ 
 
 
 }
@@ -623,14 +623,26 @@ details[open] summary {
     
 }
 
+
+@media (max-width:412px){
+    #title-1{
+        margin-bottom: 60px;
+   margin-left: 5px;
+   margin-right: 5px;
+    }
+    #title-1 p{
+        margin-left: 20px;
+    }
+}
+
 /*******title-2******/
 #title-2{
     background: var(--secondary-white-text);
     grid-area: title-2;
     color: var(--text-dark-black-color);
     text-align: center;
-    height: 100px;
-    margin-bottom: 20px;
+  
+   
 
 }
 
